@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Space Invaders Game Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Minimal custom styling */
+			.game-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+			.game-header {
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			.image-card {
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			}
+			.image-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			.image-caption {
+				padding: 1rem;
+				background: #f8f9fa;
+			}
+			.tech-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			.tech-card {
+				padding: 1.5rem;
+				background: #f8f9fa;
+				border-radius: 8px;
+				border-top: 4px solid #4a6582;
+			}
+			.code-sample {
+				background: #2c3e50;
+				color: #f8f9fa;
+				padding: 1.5rem;
+				border-radius: 8px;
+				overflow-x: auto;
+				margin: 2rem 0;
+				font-family: monospace;
+			}
+			.resource-link {
+				display: inline-block;
+				margin: 0.5rem 0.5rem 0.5rem 0;
+				padding: 0.6rem 1.2rem;
+				background: #1a73e8;
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: bold;
+				font-size: 0.9rem;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">James Stringer <br> Projects</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="samples.html">Samples</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main Content -->
+			<div id="main">
+				<div class="game-container">
+					<header class="game-header">
+						<h1>Space Invaders Game</h1>
+						<p>A Python/PyGame implementation with advanced features</p>
+					</header>
+					
+					<p>This Space Invaders-style game was developed using Python and the PyGame library. It features multiple game states, sound effects, music, score tracking, and dynamic difficulty progression. The project demonstrates strong object-oriented programming skills and game development techniques.</p>
+					
+					<h2>Game Screenshots</h2>
+					<div class="image-grid">
+						<div class="image-card">
+							<img src="images/pygame1.png" alt="Game Start Screen">
+							<div class="image-caption">
+								<h3>Start Screen</h3>
+								<p>Main menu with play button and instructions</p>
+							</div>
+						</div>
+						
+						<div class="image-card">
+							<img src="images/pygame2.png" alt="Gameplay in Action">
+							<div class="image-caption">
+								<h3>Gameplay</h3>
+								<p>Player ship fighting alien invaders</p>
+							</div>
+						</div>
+						
+						<div class="image-card">
+							<img src="images/pygame3.png" alt="Game Over Screen">
+							<div class="image-caption">
+								<h3>Game Over</h3>
+								<p>Death screen with final score display</p>
+							</div>
+						</div>
+					</div>
+					
+					<h2>Python Techniques Used</h2>
+					<div class="tech-grid">
+						<div class="tech-card">
+							<h3>Object-Oriented Programming</h3>
+							<p>Classes for Ship, Alien, Bullet, Button, and GameStats with encapsulation</p>
+						</div>
+						
+						<div class="tech-card">
+							<h3>Game State Management</h3>
+							<p>Handling different game states (menu, gameplay, game over)</p>
+						</div>
+						
+						<div class="tech-card">
+							<h3>Event Handling</h3>
+							<p>Processing keyboard inputs and mouse events</p>
+						</div>
+						
+						<div class="tech-card">
+							<h3>Collision Detection</h3>
+							<p>Using PyGame's sprite collision methods</p>
+						</div>
+						
+						<div class="tech-card">
+							<h3>Resource Management</h3>
+							<p>Loading images, sound effects, and music from files</p>
+						</div>
+						
+						<div class="tech-card">
+							<h3>Data Persistence</h3>
+							<p>Saving and loading high scores to/from text files</p>
+						</div>
+					</div>
+					
+					<h2>Key Game Features</h2>
+					<ul>
+						<li>Multiple game states: Menu, Active Play, Game Over</li>
+						<li>Dynamic difficulty progression with increasing alien speed</li>
+						<li>Score tracking with high score persistence</li>
+						<li>Ship lives display at bottom of screen</li>
+						<li>Fullscreen toggle capability</li>
+						<li>Different music tracks for each game state</li>
+						<li>Sound effects for shooting, explosions, and death</li>
+						<li>Visual feedback for score changes and level progression</li>
+					</ul>
+					
+					<h2>Code Structure</h2>
+					<p>The game follows a modular structure with separate files for different components:</p>
+					
+					<div class="tech-grid">
+						<div class="tech-card">
+							<h4>alien_invasion.py</h4>
+							<p>Main game class managing overall flow and events</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>settings.py</h4>
+							<p>Game configuration and dynamic settings</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>ship.py</h4>
+							<p>Player ship behavior and rendering</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>alien.py</h4>
+							<p>Alien enemy behavior and movement</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>bullet.py</h4>
+							<p>Projectile mechanics and rendering</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>button.py</h4>
+							<p>Interactive menu buttons</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>game_stats.py</h4>
+							<p>Tracking game statistics and scores</p>
+						</div>
+						
+						<div class="tech-card">
+							<h4>scoreboard.py</h4>
+							<p>Displaying and updating score information</p>
+						</div>
+					</div>
+					
+					<h2>Code Sample</h2>
+					<div class="code-sample">
+						<pre><code># alien_invasion.py - Main game loop
+def run_game(self):
+    """Start the main loop for the game."""
+    while True:
+        self._check_events()
+
+        if self.stats.game_active:
+            self.ship.update()
+            self._update_bullets()
+            self._update_aliens()
+        
+        self._update_screen()
+        self.clock.tick(60)
+
+def _update_bullets(self):
+    """Handle all bullet behavior."""
+    self.bullets.update()
+    self._remove_offscreen_bullets()
+    self._check_bullet_alien_collisions()
+    self._check_for_new_wave()
+
+def _check_bullet_alien_collisions(self):
+    """Respond to bullet-alien collisions."""
+    collisions = pygame.sprite.groupcollide(
+        self.bullets, self.aliens, True, True
+    )
+    
+    if collisions:
+        for aliens in collisions.values():
+            self.stats.score += self.settings.alien_points * len(aliens)
+            self.explosion_sound.play()
+        self.sb.prep_score()
+        self.sb.check_high_score()</code></pre>
+					</div>
+					
+					<h2>Technical Challenges Overcome</h2>
+					<ul>
+						<li><strong>Resource Path Handling:</strong> Implemented robust path resolution for assets across different environments</li>
+						<li><strong>Game State Transitions:</strong> Created seamless transitions between menu, gameplay, and game over states</li>
+						<li><strong>Dynamic Difficulty:</strong> Implemented scaling difficulty that increases as players progress</li>
+						<li><strong>Performance Optimization:</strong> Efficient sprite management for smooth gameplay</li>
+						<li><strong>Audio Management:</strong> Coordinated multiple sound effects and music tracks</li>
+					</ul>
+					
+					<h2>Project Resources</h2>
+					<p>
+						<a href="https://github.com/js346170/Space-Invaders-" 
+						   class="resource-link" 
+						   target="_blank">
+							View on GitHub
+						</a>
+					</p>
+					
+					<h2>Skills Demonstrated</h2>
+					<ul>
+						<li>Object-oriented design principles</li>
+						<li>Game development architecture</li>
+						<li>Event-driven programming</li>
+						<li>Cross-platform resource management</li>
+						<li>Algorithm implementation (collision detection, pathing)</li>
+						<li>User experience design for games</li>
+						<li>Problem-solving and debugging complex systems</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

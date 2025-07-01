@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Learning Log Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            /* Project-specific styling */
+            .project-header {
+                text-align: center;
+                margin: 3rem 0;
+                padding: 2rem 0;
+                background: #f8f9fa;
+                border-radius: 8px;
+            }
+            
+            .project-overview {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+            
+            .project-description {
+                flex: 1;
+                min-width: 300px;
+            }
+            
+            .project-stats {
+                flex: 1;
+                min-width: 300px;
+                background: white;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            }
+            
+            .stat-item {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .stat-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .image-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            
+            .image-card {
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            
+            .image-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .image-container {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f0f4f8;
+                padding: 15px;
+                min-height: 250px;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                display: block;
+                border-radius: 4px;
+            }
+            
+            .image-caption {
+                padding: 1rem;
+                background: white;
+                text-align: center;
+                border-top: 1px solid #eee;
+            }
+            
+            .feature-section {
+                margin: 3rem 0;
+                padding: 2rem;
+                background: #f8f9fa;
+                border-radius: 8px;
+            }
+            
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .feature-card {
+                background: white;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                border-top: 4px solid #3498db;
+            }
+            
+            .feature-card h4 {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .tech-stack {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 2rem 0;
+                justify-content: center;
+            }
+            
+            .tech-item {
+                background: #e8f4f8;
+                padding: 0.8rem 1.5rem;
+                border-radius: 30px;
+                font-weight: 500;
+            }
+            
+            .code-block {
+                background: #2d3748;
+                color: #e2e8f0;
+                padding: 20px;
+                border-radius: 8px;
+                font-family: 'Courier New', monospace;
+                font-size: 0.9rem;
+                overflow-x: auto;
+                margin: 20px 0;
+            }
+            
+            .skills-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            .skill-card {
+                padding: 1.5rem;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                border-top: 4px solid #3498db;
+            }
+            
+            .github-link {
+                display: inline-block;
+                margin: 1rem 0;
+                padding: 0.8rem 1.5rem;
+                background: #333;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                font-weight: bold;
+                transition: all 0.3s;
+            }
+            
+            .github-link:hover {
+                background: #555;
+                transform: translateY(-2px);
+            }
+            
+            .project-section {
+                margin-bottom: 3rem;
+                padding: 1.5rem;
+                background: #f8f9fa;
+                border-radius: 8px;
+            }
+            
+            .app-demo {
+                display: flex;
+                justify-content: center;
+                margin: 2rem 0;
+                background: #f0f4f8;
+                padding: 20px;
+                border-radius: 8px;
+            }
+            
+            .app-demo img {
+                max-width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .image-note {
+                text-align: center;
+                margin-top: 1rem;
+                font-style: italic;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">James Stringer <br> Projects</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="samples.html">Samples</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+                <section class="ethno-container">
+                    <div class="project-header">
+                        <h1>Learning Log Application</h1>
+                        <p>A Django-based collaborative learning platform</p>
+                    </div>
+                    
+                    <div class="project-overview">
+                        <div class="project-description">
+                            <h2>Project Overview</h2>
+                            <p>Learning Log is a full-stack web application that provides a collaborative learning platform where educators can create topics and students can contribute entries. Developed with Django and deployed on Heroku, this application demonstrates robust backend architecture and user-friendly design.</p>
+                            
+                            <p>The platform features secure user authentication, topic management, entry creation and editing, and a responsive interface. Designed for educational environments, it facilitates organized classroom discussions and knowledge sharing.</p>
+                            
+                            <a href="https://github.com/js346170/Learninig-Log-Website-" class="github-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="project-stats">
+                            <h3>Project Details</h3>
+                            <div class="stat-item">
+                                <h4>Technology Stack</h4>
+                                <p>Python, Django, PostgreSQL, Bootstrap, HTML/CSS</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Development Time</h4>
+                                <p>3 months (part-time)</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Key Features</h4>
+                                <p>User authentication, Topic management, Entry creation, Editing functionality</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Deployment</h4>
+                                <p>Heroku with PostgreSQL database</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Application Demo</h2>
+                        <div class="app-demo">
+                            <img src="images/ll_entry.png" alt="Learning Log in action">
+                        </div>
+                        <p class="image-note">Example topic page showing entries from students</p>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Application Screenshots</h2>
+                        <div class="image-grid">
+                            <div class="image-card">
+                                <div class="image-container">
+                                    <img src="images/LL1.png" alt="Learning Log Home Page">
+                                </div>
+                                <div class="image-caption">Home Page</div>
+                            </div>
+                            <div class="image-card">
+                                <div class="image-container">
+                                    <img src="images/ll_log_in.png" alt="Login Screen">
+                                </div>
+                                <div class="image-caption">Login Screen</div>
+                            </div>
+                            <div class="image-card">
+                                <div class="image-container">
+                                    <img src="images/ll_register.png" alt="Registration Screen">
+                                </div>
+                                <div class="image-caption">Registration Screen</div>
+                            </div>
+                            <div class="image-card">
+                                <div class="image-container">
+                                    <img src="images/ll_entry.png" alt="Topic Entry">
+                                </div>
+                                <div class="image-caption">Topic with Entries</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-section">
+                        <h2>Key Features</h2>
+                        <div class="features">
+                            <div class="feature-card">
+                                <h4><i class="fas fa-user-lock"></i> Secure Authentication</h4>
+                                <p>Implemented Django's authentication system with password validation and session management.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-folder-plus"></i> Topic Management</h4>
+                                <p>Teachers can create topics, students can browse and contribute to relevant topics.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-edit"></i> Entry Creation</h4>
+                                <p>Students can create and edit their entries with a user-friendly interface.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4><i class="fas fa-shield-alt"></i> Authorization</h4>
+                                <p>Role-based access controls ensure users only modify their own content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Technical Implementation</h2>
+                        <p>The application was built using Django's MVT architecture with PostgreSQL for data storage. Key technical components include:</p>
+                        
+                        <h3>Database Models</h3>
+                        <div class="code-block">
+# models.py - Database schema
+from django.db import models
+from django.contrib.auth.models import User
+
+class Topic(models.Model):
+    """A topic the user is learning about."""
+    text = models.CharField(max_length=200)
+    date_added = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class Entry(models.Model):
+    """Something specific learned about a topic."""
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+                        </div>
+                        
+                        <h3>View Logic</h3>
+                        <div class="code-block">
+# views.py - Protecting views with authentication
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def edit_entry(request, entry_id):
+    """Edit an existing entry with ownership check."""
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+    
+    # Ensure the topic belongs to the current user
+    if topic.owner != request.user:
+        raise Http404("You are not authorized to edit this entry.")
+                        </div>
+                        
+                        <h3>Technology Stack</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Django</div>
+                            <div class="tech-item">PostgreSQL</div>
+                            <div class="tech-item">HTML5</div>
+                            <div class="tech-item">CSS3</div>
+                            <div class="tech-item">Bootstrap</div>
+                            <div class="tech-item">Heroku</div>
+                            <div class="tech-item">Git</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h2>Skills Demonstrated</h2>
+                        <div class="skills-container">
+                            <div class="skill-card">
+                                <h4>Backend Development</h4>
+                                <p>Designed and implemented Django models, views, and authentication system.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>Database Design</h4>
+                                <p>Created efficient relational database schema using Django ORM.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>Deployment</h4>
+                                <p>Configured Heroku deployment with PostgreSQL and static file handling.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h4>Security</h4>
+                                <p>Implemented authentication, authorization, and CSRF protection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 3rem 0;">
+                        <a href="projects.html" class="button large">Back to Projects</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" /></li>
+                        </ul>
+                    </form>
+                </section>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

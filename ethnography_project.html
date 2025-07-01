@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ethnography Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Minimal custom styling */
+			.ethno-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 2rem;
+			}
+			.ethno-header {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+			.project-section {
+				margin-bottom: 3rem;
+				padding: 1.5rem;
+				background: #f8f9fa;
+				border-radius: 8px;
+			}
+			.image-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			.image-card {
+				position: relative;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+			}
+			.image-card img {
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+			}
+			.image-card:hover img {
+				transform: scale(1.05);
+			}
+			.image-caption {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,0,0,0.7);
+				color: white;
+				padding: 1rem;
+				font-size: 0.9rem;
+			}
+			.partner-card {
+				display: flex;
+				align-items: center;
+				padding: 1.5rem;
+				background: white;
+				border-radius: 8px;
+				margin: 1.5rem 0;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+			}
+			.partner-logo {
+				width: 80px;
+				height: 80px;
+				background: #e8f4f8;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 1.5rem;
+				flex-shrink: 0;
+				font-size: 2rem;
+			}
+			.timeline {
+				position: relative;
+				margin: 2rem 0;
+				padding-left: 20px;
+			}
+			.timeline:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 4px;
+				background: #3498db;
+			}
+			.timeline-item {
+				position: relative;
+				margin-bottom: 2rem;
+				padding-left: 30px;
+			}
+			.timeline-item:before {
+				content: '';
+				position: absolute;
+				left: -8px;
+				top: 8px;
+				width: 20px;
+				height: 20px;
+				background: #8e44ad;
+				border-radius: 50%;
+			}
+			.skills-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			.skill-card {
+				padding: 1.5rem;
+				background: white;
+				border-radius: 8px;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+				border-top: 4px solid #3498db;
+			}
+			.testimonial {
+				background: #e8f4f8;
+				border-left: 4px solid #3498db;
+				padding: 1.5rem;
+				margin: 2rem 0;
+				border-radius: 0 8px 8px 0;
+			}
+			.partner-link {
+				display: inline-block;
+				margin: 1rem 0;
+				padding: 0.8rem 1.5rem;
+				background: #4267B2;
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">James Stringer <br> Projects</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="samples.html">Samples</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main Content -->
+			<div id="main">
+				<div class="ethno-container">
+					<header class="ethno-header">
+						<h1>Ethnographic Research Initiative</h1>
+						<p>Cultural immersion and research with ethnic minority communities in China</p>
+					</header>
+					
+					<div class="project-section">
+						<h2>Project Background</h2>
+						<p>I was specifically hired by Tsinghua International School for my background in Anthropology and Ethnographic research to lead the 9th-grade semester-long Ethnography Project. This initiative partners with Prop Roots to engage students in ethnographic fieldwork and social work with ethnic minority groups in China's Yunnan province near the Myanmar border.</p>
+						
+						<div class="partner-card">
+							<div class="partner-logo">🌱</div>
+							<div>
+								<h3>Collaboration with Prop Roots</h3>
+								<p>Prop Roots is a community development organization working with ethnic minority communities in Yunnan. Our partnership provides students with authentic cultural immersion experiences.</p>
+								<a href="https://www.facebook.com/PropRoots/" 
+								   class="partner-link" 
+								   target="_blank">
+									Visit Prop Roots Facebook Page
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="image-grid">
+						<div class="image-card">
+							<img src="images/proproots.jpg" alt="Prop Roots fieldwork in Yunnan">
+							<div class="image-caption">Ethnographic fieldwork with Prop Roots in Yunnan</div>
+						</div>
+						<div class="image-card">
+							<img src="images/Shangpiin.jpg" alt="Shangpin Mall ethnography in Beijing">
+							<div class="image-caption">COVID adaptation at Shangpin Mall in Beijing</div>
+						</div>
+					</div>
+					
+					<div class="project-section">
+						<h2>Year 1: Beijing Adaptation</h2>
+						<p>When COVID restrictions prevented travel to Yunnan in the first year, I organized an innovative ethnographic study in Beijing at Shangpin Mall (上品). This required:</p>
+						
+						<div class="timeline">
+							<div class="timeline-item">
+								<h4>Site Selection & Negotiation</h4>
+								<p>Identified Shangpin Mall as a suitable fieldwork location and negotiated access with mall management for 60+ students.</p>
+							</div>
+							
+							<div class="timeline-item">
+								<h4>Activity Design</h4>
+								<p>Created structured ethnographic activities including customer observations, worker interviews, and cultural mapping.</p>
+							</div>
+							
+							<div class="timeline-item">
+								<h4>Permission & Safety</h4>
+								<p>Secured all necessary permissions and implemented safety protocols for student researchers.</p>
+							</div>
+							
+							<div class="timeline-item">
+								<h4>Participant Observation</h4>
+								<p>Arranged for students to work in specific stores to conduct immersive participant observation.</p>
+							</div>
+						</div>
+						
+						<div class="testimonial">
+							<h4>Successful Adaptation</h4>
+							<p>"Despite the challenges of finding a location for 60+ students during COVID restrictions, the Shangpin Mall ethnography was a remarkable success. Students gained practical research experience while examining contemporary urban culture in Beijing."</p>
+						</div>
+					</div>
+					
+					<div class="project-section">
+						<h2>Year 2: Yunnan Fieldwork</h2>
+						<p>In the second year, we were able to travel to Yunnan for the originally planned ethnographic experience with Prop Roots.</p>
+						
+						<ul>
+							<li><strong>Cultural Immersion:</strong> Students lived and worked with ethnic minority communities near the Myanmar border</li>
+							<li><strong>Participant Observation:</strong> Engaged in daily activities, ceremonies, and community events</li>
+							<li><strong>Social Work Integration:</strong> Combined research with meaningful community service projects</li>
+							<li><strong>Collaborative Learning:</strong> Worked alongside Chinese department colleagues for cross-cultural understanding</li>
+							<li><strong>Research Reports:</strong> Students completed comprehensive ethnographic reports based on their fieldwork</li>
+						</ul>
+						
+						<h3>Fieldwork Activities</h3>
+						<div class="skills-container">
+							<div class="skill-card">
+								<h4>Cultural Documentation</h4>
+								<p>Recording traditional practices, rituals, and oral histories</p>
+							</div>
+							<div class="skill-card">
+								<h4>Community Interviews</h4>
+								<p>Conducting structured and unstructured interviews with community members</p>
+							</div>
+							<div class="skill-card">
+								<h4>Social Projects</h4>
+								<p>Participating in community development initiatives</p>
+							</div>
+							<div class="skill-card">
+								<h4>Reflective Journals</h4>
+								<p>Maintaining daily fieldwork journals and observations</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="project-section">
+						<h2>Educational Outcomes</h2>
+						<p>This project develops essential anthropological and research skills:</p>
+						
+						<div class="skills-container">
+							<div class="skill-card">
+								<h4>Cultural Competence</h4>
+								<p>Developing understanding and appreciation of diverse cultures</p>
+							</div>
+							<div class="skill-card">
+								<h4>Research Methodology</h4>
+								<p>Learning ethnographic techniques and qualitative analysis</p>
+							</div>
+							<div class="skill-card">
+								<h4>Critical Thinking</h4>
+								<p>Analyzing cultural patterns and social structures</p>
+							</div>
+							<div class="skill-card">
+								<h4>Empathy Development</h4>
+								<p>Building connections across cultural boundaries</p>
+							</div>
+						</div>
+						
+						<h3>Skills Demonstrated</h3>
+						<ul>
+							<li><strong>Anthropological Expertise:</strong> Applied professional ethnographic methods to educational context</li>
+							<li><strong>Program Development:</strong> Created a comprehensive semester-long research curriculum</li>
+							<li><strong>Adaptability:</strong> Successfully pivoted during COVID restrictions</li>
+							<li><strong>Partnership Building:</strong> Established and maintained collaboration with Prop Roots</li>
+							<li><strong>Logistical Planning:</strong> Coordinated complex fieldwork for large student groups</li>
+						</ul>
+					</div>
+					
+					<div class="project-section">
+						<h2>Student Research & Legacy</h2>
+						<p>Students completed comprehensive ethnographic research reports based on their fieldwork. These projects demonstrated:</p>
+						
+						<ul>
+							<li>Deep engagement with research methodologies</li>
+							<li>Cultural sensitivity and ethical research practices</li>
+							<li>Critical analysis of cultural patterns</li>
+							<li>Effective communication of complex cultural insights</li>
+						</ul>
+						
+						<blockquote>
+							"The ethnography project completely changed my perspective. Living with a community in Yunnan and documenting their daily lives taught me more about cultural understanding than any textbook could."
+							<footer>- Grade 9 Student</footer>
+						</blockquote>
+						
+						<p>This project has become a cornerstone of the 9th-grade curriculum at Tsinghua International School, providing students with transformative learning experiences that bridge academic anthropology with real-world cultural understanding. I used some of this experience at Delta Global School  to organize cultural field trip to Perume Pagoda outside of Hanoi and to plan future field trips.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

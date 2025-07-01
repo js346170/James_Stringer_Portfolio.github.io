@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SQL Cleaning and Exploration of Layoffs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">James Stringer </br> Projects</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="samples.html">Samples</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main Content -->
+			<div id="main">
+
+				<!-- Data Analytics Projects: SQL-Based Data Cleaning and Analysis -->
+				<section class="post featured">
+					<header class="major">
+						<h1>SQL Data Cleaning & Exploratory Data Analysis</h1>
+					</header>
+                    <img src="images/sqlimg2.png" alt="sql stuff" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
+
+					<p>This project focuses on the comprehensive data cleaning and exploratory data analysis (EDA) I performed on a dataset regarding **company layoffs**. Through this project, I honed several key **data analytics skills**, including SQL data cleaning, handling missing values, removing duplicates, and performing detailed exploratory analysis using complex queries.</p>
+
+					<h2>Data Cleaning Techniques</h2>
+					<p>In this part of the project, I focused on **cleaning** the data from a raw dataset by removing duplicates, handling missing values, and standardizing data formats. Some of the specific skills and tasks I performed included:</p>
+					
+					<ul>
+						<li><strong>Handling Duplicates:</strong> Used `ROW_NUMBER()` and `PARTITION BY` to identify and remove duplicate rows from the dataset.</li>
+						<li><strong>Standardizing Data:</strong> Cleaned inconsistent data entries, such as trimming spaces from text and formatting date fields.</li>
+						<li><strong>Dealing with Missing Values:</strong> Identified and handled null values in critical columns like `total_laid_off` and `percentage_laid_off` to ensure accurate analysis.</li>
+						<li><strong>Dropping Unnecessary Columns:</strong> Removed columns that provided no value to the analysis, streamlining the dataset for further exploration.</li>
+					</ul>
+
+					<h3>Key SQL Queries for Data Cleaning</h3>
+					<p>Below is a sample of the SQL queries used during the data cleaning process:</p>
+
+					<pre>
+-- Remove duplicates using row_number() 
+WITH duplicate_cte AS (
+    SELECT *, 
+           ROW_NUMBER() OVER (PARTITION BY company, location, industry ORDER BY date) AS row_num
+    FROM layoffs_staging
+)
+DELETE FROM duplicate_cte WHERE row_num > 1;
+					</pre>
+
+					<h2>Exploratory Data Analysis (EDA)</h2>
+					<p>After cleaning the data, I performed a series of **exploratory analysis** tasks to extract meaningful insights from the layoffs data. This involved grouping data by key attributes, identifying trends over time, and investigating correlations between layoffs and other variables. The following tasks were performed:</p>
+
+					<ul>
+						<li><strong>Company-wise Layoff Trends:</strong> Aggregated data by company to determine the total number of layoffs for each organization and analyzed patterns.</li>
+						<li><strong>Yearly and Monthly Layoff Analysis:</strong> Analyzed the data over time by extracting the year and month from the date field and performing a rolling total analysis.</li>
+						<li><strong>Location-based Insights:</strong> Investigated the layoffs by location and country to identify geographic trends and outliers.</li>
+						<li><strong>Industry Analysis:</strong> Examined layoffs across different industries, with a focus on high-impact sectors like technology and finance.</li>
+					</ul>
+
+					<h3>Key SQL Queries for EDA</h3>
+					<p>Below is a sample of the SQL queries used during the exploratory analysis phase:</p>
+
+					<pre>
+-- Yearly analysis of layoffs by company
+SELECT company, YEAR(date), SUM(total_laid_off)
+FROM world_layoffs.layoffs_staging2
+GROUP BY company, YEAR(date)
+ORDER BY company ASC;
+
+-- Rolling total of layoffs by month
+WITH rolling_total AS (
+    SELECT SUBSTRING(date, 1, 7) AS month, SUM(total_laid_off) AS total_off
+    FROM world_layoffs.layoffs_staging2
+    GROUP BY month
+)
+SELECT month, total_off, SUM(total_off) OVER (ORDER BY month) AS rolling_total
+FROM rolling_total;
+					</pre>
+
+					<h2>Skills Developed</h2>
+					<p>Through this project, I developed and refined the following key **data analytics** skills:</p>
+					
+					<ul>
+						<li><strong>Advanced SQL Querying:</strong> Writing complex queries with `JOIN`, `GROUP BY`, `PARTITION BY`, `WITH`, and window functions.</li>
+						<li><strong>Data Cleaning & Preprocessing:</strong> Efficiently handling missing values, removing duplicates, and ensuring the dataset is standardized for analysis.</li>
+						<li><strong>Exploratory Data Analysis (EDA):</strong> Conducting in-depth analysis of data trends, and identifying significant insights for business decisions.</li>
+						<li><strong>Data Transformation:</strong> Using SQL functions to manipulate data and generate useful metrics for decision-making.</li>
+					</ul>
+
+					<h2>Conclusion</h2>
+					<p>This project provided an opportunity to apply my skills in data cleaning and analysis, using real-world data to generate insights into industry-wide trends related to company layoffs. The techniques I used in this project are directly applicable to many real-world data analysis tasks, making it an important step in my journey as a data analyst.</p>
+
+					<h2>Code Samples & GitHub Repository</h2>
+					<p>You can view the full code and additional SQL-based data analytics projects on my GitHub repository. Please visit the link below for access:</p>
+					<a href="https://github.com/js346170/SQL-Analytics-Projects-" target="_blank">GitHub: SQL Analytics Projects</a>
+
+				</section>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

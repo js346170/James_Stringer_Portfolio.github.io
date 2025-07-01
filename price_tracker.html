@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Price Tracker Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">James Stringer <br> Projects</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="samples.html">Samples</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main Content -->
+			<div id="main">
+				<article class="post">
+					<header class="major">
+						<h1>Price Tracker System</h1>
+						<p>Automated web scraping solution for monitoring product prices</p>
+					</header>
+					
+					<h2>Project Overview</h2>
+					<p>This Python-based price tracking system allows users to monitor product prices across e-commerce sites. Users simply add product URLs to a text file, and the system automatically checks prices every 24 hours, logs changes, and sends email alerts for significant price drops.</p>
+					
+					<div class="box">
+						<h3>Key Features</h3>
+						<ul>
+							<li>Automated daily price monitoring</li>
+							<li>Email notifications for price changes</li>
+							<li>Historical price tracking with CSV logging</li>
+							<li>Anti-detection techniques with request rotation</li>
+							<li>Scheduled execution with APScheduler</li>
+							<li>Single-instance enforcement to prevent duplicates</li>
+						</ul>
+					</div>
+					
+					<h2>Technical Implementation</h2>
+					<p>The system combines several Python technologies to create a robust, automated tracking solution:</p>
+					
+					<h3>Core Technologies Used</h3>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Technology</th>
+									<th>Purpose</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>BeautifulSoup</td>
+									<td>HTML parsing and data extraction</td>
+								</tr>
+								<tr>
+									<td>Requests</td>
+									<td>HTTP requests to product pages</td>
+								</tr>
+								<tr>
+									<td>APScheduler</td>
+									<td>Automated daily execution</td>
+								</tr>
+								<tr>
+									<td>CSV Module</td>
+									<td>Data persistence and logging</td>
+								</tr>
+								<tr>
+									<td>smtplib</td>
+									<td>Email notification system</td>
+								</tr>
+								<tr>
+									<td>Logging Module</td>
+									<td>Error tracking and system monitoring</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<h3>Key Technical Skills Demonstrated</h3>
+					<ul>
+						<li><strong>Web Scraping:</strong> Robust extraction of product data from e-commerce sites</li>
+						<li><strong>Error Handling:</strong> Comprehensive exception management for reliability</li>
+						<li><strong>Scheduling:</strong> Automated execution using cron-like scheduling</li>
+						<li><strong>Data Persistence:</strong> CSV-based storage of historical price data</li>
+						<li><strong>Anti-Bot Measures:</strong> Random delays and header rotation to avoid detection</li>
+						<li><strong>Email Integration:</strong> HTML-formatted price alerts</li>
+						<li><strong>System Architecture:</strong> Single instance enforcement and proper resource management</li>
+					</ul>
+					
+					<h2>Future Applications & Enhancements</h2>
+					<p>The core technology can be extended for various applications:</p>
+					
+					<div class="row">
+						<div class="col-6 col-12-small">
+							<h4>Potential Enhancements</h4>
+							<ul>
+								<li>Browser extension for easier URL management</li>
+								<li>Price prediction using historical data trends</li>
+								<li>Multi-vendor price comparison</li>
+								<li>Mobile app notifications</li>
+								<li>Dynamic pricing threshold alerts</li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-small">
+							<h4>Business Applications</h4>
+							<ul>
+								<li>Competitor price monitoring</li>
+								<li>Inventory management systems</li>
+								<li>Price optimization for retailers</li>
+								<li>Affiliate marketing tools</li>
+								<li>Market research data collection</li>
+							</ul>
+						</div>
+					</div>
+					
+					<h2>Project Resources</h2>
+					<ul class="actions">
+						<li><a href="https://github.com/js346170/Price-Tracker-" class="button primary icon brands fa-github">View on GitHub</a></li>
+						<li><a href="price_tracker_project.py" class="button icon solid fa-download">Download Python File</a></li>
+					</ul>
+					
+					<pre><code># Sample code snippet
+def scrape_product(url):
+    """Main scraping function with data persistence"""
+    try:
+        response = requests.get(url, headers=get_random_headers(), timeout=20)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Extract product details
+        title = soup.find('span', {'id': 'productTitle'}).get_text(strip=True)
+        
+        # Price extraction logic
+        price_element = soup.select_one('span.a-price span.a-offscreen')
+        raw_price = price_element.get_text(strip=True) if price_element else "N/A"
+        
+        # Save to CSV and check for price changes
+        # ... (full implementation in project file)</code></pre>
+				</article>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
