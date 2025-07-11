@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Experience</title>
@@ -7,6 +6,140 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			/* New styles for prominent resume button */
+			.resume-button-container {
+				text-align: center;
+				margin: 1.5rem 0;
+			}
+			
+			.resume-button {
+				display: inline-block;
+				padding: 1rem 2rem;
+				background: #4a90e2;
+				color: white;
+				border-radius: 6px;
+				font-weight: bold;
+				font-size: 1.4rem;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+			
+			.resume-button:hover {
+				background: #3a7bc8;
+				transform: translateY(-2px);
+				box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+			}
+			
+			.resume-button i {
+				margin-right: 10px;
+			}
+			
+			.resume-subtext {
+				display: block;
+				margin-top: 0.5rem;
+				font-size: 0.9rem;
+				color: #555;
+			}
+			
+			/* Enhanced contact section */
+			.contact-info {
+				margin-top: 2rem;
+				padding: 1.5rem;
+				background: #f5f9fc;
+				border-radius: 8px;
+				border-left: 4px solid #4a90e2;
+			}
+			
+			.contact-info h3 {
+				margin-top: 0;
+				color: #2c3e50;
+			}
+			
+			.contact-method {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1rem;
+			}
+			
+			.contact-method i {
+				width: 30px;
+				font-size: 1.2rem;
+				color: #4a90e2;
+			}
+			
+			.contact-method a {
+				color: #3498db;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+			
+			.contact-method a:hover {
+				color: #2980b9;
+				text-decoration: underline;
+			}
+			
+			/* Existing column styles */
+			.columns-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				margin-top: 2rem;
+			}
+			
+			.column {
+				flex: 1;
+				min-width: 300px;
+			}
+			
+			.column-header {
+				background: #4a90e2;
+				color: white;
+				padding: 1rem;
+				border-radius: 6px 6px 0 0;
+			}
+			
+			.column-header h2 {
+				margin: 0;
+			}
+			
+			.items-list {
+				background: white;
+				padding: 1.5rem;
+				border-radius: 0 0 6px 6px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+			}
+			
+			.item {
+				margin-bottom: 2rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid #eee;
+			}
+			
+			.item:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			
+			.item h3 {
+				margin-top: 0;
+				color: #2c3e50;
+			}
+			
+			.item p {
+				color: #555;
+				margin-bottom: 0.5rem;
+			}
+			
+			.date {
+				font-style: italic;
+				color: #777;
+				font-size: 0.9rem;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -15,7 +148,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">James Stringer <br/> Experience</a>
+						<a href="index.html" class="logo">James Hayes Stringer <br/> Experience</a>
 					</header>
 
 				<!-- Nav -->
@@ -24,8 +157,8 @@
 							<li><a href="index.html">Home</a></li>
 							<li class="active"><a href="experience.html">Experience</a></li>
 							<li><a href="projects.html">Projects</a></li>
-                            </li> <a href="samples.html">Samples</a></li>
-						
+                            <li><a href="samples.html">Samples</a></li>
+						</ul>
 					</nav>
 
 				<!-- Main -->
@@ -39,178 +172,208 @@
     								<span style="font-size: .8em;">Research</span><br />
     								<span style="font-size: .8em;">Classroom</span><br />
    									<span style="font-size: .8em;">Programming and Data</span></h1>
-									<p><a href="https://drive.google.com/file/d/1dFh5qqdQ8BOg99HCeN-tsBo1pagIXUxL/view?usp=sharing" target="_blank" style="font-size: 30px;">Resume</a></p>
-
+									
+									<!-- Prominent Resume Button with Subtext -->
+									<div class="resume-button-container">
+										<a href="https://drive.google.com/file/d/1dFh5qqdQ8BOg99HCeN-tsBo1pagIXUxL/view?usp=sharing" 
+										   target="_blank" 
+										   class="resume-button">
+										  <i class="fas fa-file-pdf"></i> View My Resume
+										</a>
+										<span class="resume-subtext">Details below</span>
+									</div>
+									
+									<!-- Enhanced Contact Information -->
+									<div class="contact-info">
+									  <h3>Contact Information</h3>
+									  
+									  <div class="contact-method">
+										<i class="fas fa-envelope"></i>
+										<a href="mailto:js346170@gmail.com">js346170@gmail.com</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-github"></i>
+										<a href="https://github.com/js346170" target="_blank">github.com/js346170</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-linkedin"></i>
+										<a href="https://www.linkedin.com/in/james-stringer-433b2120b" target="_blank">linkedin.com/in/james-stringer</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-whatsapp"></i>
+										<a href="https://wa.me/84832438819" target="_blank">+84 83 243 8819</a>
+									  </div>
+									</div>
 								</header>
-								</section>
-								<!-- JavaScript to update the date -->
-<script>
-    // Get the current date
-    const today = new Date();
+							</section>
+							
+							<!-- JavaScript to update the date -->
+							<script>
+								// Get the current date
+								const today = new Date();
 
-    // Get the current date in the format of "Month Day, Year"
-    const dateStr = today.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
+								// Get the current date in the format of "Month Day, Year"
+								const dateStr = today.toLocaleDateString('en-US', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric'
+								});
 
-    // Update the span with the current date
-    document.getElementById("current-date").textContent = dateStr;
-</script>
-								<div class="columns-container">
-            <!-- Education & Training Column -->
-            <div class="column education">
-                <div class="column-header">
-                    <h2>Education & Training</h2>
-                </div>
-                <div class="items-list">
-                    <div class="item">
-                        <h3><a href="DAB-details.html">Data Analytics Bootcamp</a></h3>
-                        <p>Cleaning, analyzing, visualizing and explaining data in SQL, Excel, Tableau, Power BI, Pandas and more</p>
-                        <div class="date">April - May 2025</div>
+								// Update the span with the current date
+								document.getElementById("current-date").textContent = dateStr;
+							</script>
+							
+							<div class="columns-container">
+								<!-- Education & Training Column -->
+								<div class="column education">
+									<div class="column-header">
+										<h2>Education & Training</h2>
+									</div>
+									<div class="items-list">
+										<div class="item">
+											<h3><a href="DAB-details.html">Data Analytics Bootcamp</a></h3>
+											<p>Cleaning, analyzing, visualizing and explaining data in SQL, Excel, Tableau, Power BI, Pandas and more</p>
+											<div class="date">April - May 2025</div>
+										</div>
 
-                    <div class="item">
-                        <h3><a href="python-details.html">Advanced Python Programming</a></h3>
-                        <p>Intensive study in python for programming, data analytics and web development</p>
-                        <div class="date">2024-Present</div>
-                    </div>
+										<div class="item">
+											<h3><a href="python-details.html">Advanced Python Programming</a></h3>
+											<p>Intensive study in Python for programming, data analytics and web development</p>
+											<div class="date">2024-Present</div>
+										</div>
 
-                    <div class="item">
-                        <h3><a href="Econ-details.html">Econ and Computer Science at Oreagon State University</a></h3>
-                        <p>Persuing a BS in Economics and Computers, topics include Calaculus for Managment and Social Science, Econometrics, Data Analytics and AI </p></div>
-                        <div class="date">2024-Present</div>
-                    </div>
-					
-					
-                    <div class="item">
-                        <h3><a href="AP-details.html">AP Training</a></h3>
-                        <p> Comleted AP training in APUSH, Modern World History, AP Seminar and Research. Certified to grade APUSH as well as Seminar and Research Presentations. Proctoring AP exams </p>
-                        <div class="date">2016-2025</div>
-                    </div>
+										<div class="item">
+											<h3><a href="Econ-details.html">Economics and Computer Science at Oregon State University</a></h3>
+											<p>Pursuing a BS in Economics and Computers, courses include Calculus for Management and Social Science, Econometrics, Data Analytics and AI</p>
+											<div class="date">2024-Present</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="AP-details.html">AP Training</a></h3>
+											<p>Completed AP training in AP US History, Modern World History, AP Seminar and Research. Certified to grade APUSH as well as Seminar and Research Presentations. Proctored AP exams</p>
+											<div class="date">2016-2025</div>
+										</div>
 
-					<div class="item">
-						<h3><a href="SEL-details.html">NYS Identification and Reporting of Child Abuse and Maltreatment</a></h3>
-						<p>Training in Social Emotional Learning in order to spot and report child abuse and maltreatment. Includes design and implementation of SEL units in classroom </p>
-						<div class="date">2023</div>
+										<div class="item">
+											<h3><a href="SEL-details.html">New York State Identification and Reporting of Child Abuse and Maltreatment</a></h3>
+											<p>Trained in social-emotional learning in order to spot and report child abuse and maltreatment. Studies included design and classroom implementation of SEL units</p>
+											<div class="date">2023</div>
+										</div>
+
+										<div class="item">
+											<h3><a href="Circles-details.html">Certified in Circles</a></h3>
+											<p>Collaborative, community building teaching methods</p>
+											<div class="date">2022</div>
+										</div>
+
+										<div class="item">
+											<h3><a href="AZTC-details.html">Arizona State Teaching Certificate</a></h3>
+											<p>Certified to teach in state of Arizona, Praxis exams, Arizona and US Constitution</p>
+											<div class="date">2022</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="Chinese-details.html">Chinese Language proficiency</a></h3>
+											<p>Advanced understanding of Written and Spoken Chinese</p>
+											<div class="date">2009-present</div>
+										</div>
+
+										<div class="item">
+											<h3><a href="MAED-details.html">Master of Education, University of Sunderland</a></h3>
+											<p>Statistical analysis of student performance and design</p>
+											<div class="date">2016 - 2018</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="PGCE-details.html">PGCE from University of Sunderland</a></h3>
+											<p>Research methods including action research, statistical analysis, mixed-methods, case-studies and more. Program development and educational theory</p>
+											<div class="date">2015</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="MAAPY-details.html">MA in Applied Anthropology at University at Buffalo</a></h3>
+											<p>Research methods focusing on ethnography, mixed methods, statistical analysis. Cross-cultural competency and program development</p>
+											<div class="date">2007-2009</div>
+										</div>
+
+										<div class="item">
+											<h3><a href="BAAPY-details.html">BA in Cultural Anthropology, University at Buffalo</a></h3>
+											<p>Qualitative and quantitative research methods. Cross-cultural interaction and understanding.</p>
+											<div class="date">2001-2006</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Work Experience Column -->
+								<div class="column experience">
+									<div class="column-header">
+										<h2>Work Experience</h2>
+									</div>
+									<div class="items-list">
+										<div class="item">
+											<h3><a href="edtech-details.html">Delta Global School: Education Technology Specialist</a></h3>
+											<p>Delta Global school ed-tech specialist handling AI, Toddle, LanSchool. Data collection and analysis</p>
+											<div class="date">2024 - Present</div
+										</div>
+										
+										<div class="item">
+											<h3><a href="socialstudies-details.html">Delta Global School: Social Studies and AP Capstone</a></h3>
+											<p>AP Capstone, economics, and comparative politics. Social studies curriculum development. Social-emotional learning and mentoring in advisory class</p>
+											<div class="date">2024-25</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="TsingHua-details.html">Tsinghua International School: Humanities Teacher and Project Lead</a></h3>
+											<p>Humanities curriculum development and lead teacher on ethnography project. AP US History. Homeroom committee co-chair</p>
+											<div class="date">2022 - 2024</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="APGrader-details.html">College Board: AP Grader US History</a></h3>
+											<p>AP Grader: US history in Kansas City</p>
+											<div class="date">Summer 2024</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="dipontconference-details">Dipont Education: English Subject Panel and conference presenter</a></h3>
+											<p>Individual presentations to professional audience on student preparation for standardized tests, student-centered learning. English curriculum committee.</p>
+											<div class="date">2018 and 2019</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="tfls-details.html">Dipont Education: Tianjin Foreign Language School: Head of Humanities and English</a></h3>
+											<p>Led implementation of AP Capstone Program. Developed PBL program, pre-AP Literature curriculum, student magazine and theater night. Taught AP human geography, seminar, research</p>
+											<div class="date">2016-2022</div>
+										</div>
+
+										<div class="item">
+											<h3><a href="zhzx-details.html">Dipont Education: Zhenhai High School: Head of English</a></h3>
+											<p>IGCSE and A Level English. Member of school steering committee. Proctoring Cambridge exams.</p>
+											<div class="date">2014-2016</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="Ambright-details.html">Ambright Education: Social studies teacher</a></h3>
+											<p>AP US history, world history. Developed pre-AP history curriculum. Interviewed prospective teachers for employment</p>
+											<div class="date">2012-2014</div>
+										</div>
+										
+										<div class="item">
+											<h3><a href="Shane-details.html">Shane English School: Kids English Teacher</a></h3>
+											<p>Primary language teacher for students ages 3-15. Managed teachng assistants.</p>
+											<div class="date">2009-2011</div>
+										</div>
+									</div>
+								</div>
+							</div>
 					</div>
-
-                    <div class="item">
-                        <h3><a href="Circles-details.html">Certified in Circles</a></h3>
-                        <p> Collaborative, community building teaching methods </p>
-                        <div class="date">2022</div>
-                    </div>
-
-					<div class="item">
-						<h3><a href="AZTC-details.html">Arizone State Teaching Certificate</a></h3>
-						<p>Certified to teach in state of Arizona, Praxis exams, Arizona and US Consitution </p>
-						<div class="date">2022</div>
-					</div>
-
-					
-					<div class="item">
-                        <h3><a href="Chinese-details.html">Chinese Language proficiency</a></h3>
-                        <p>Advanced understanding of Written and Spoken Chinese </p>
-                        <div class="date">2009-present</div>
-                    </div>
-
-                    <div class="item">
-                        <h3><a href="MAED-details.html">Master of Education from University of Sunderland</a></h3>
-                        <p>Statistical analysis of student performance, Quantitative and Qualitative Research, Standardized Tests, Survey, Interview and Focus Group design </p>
-                        <div class="date">2016 - 2018</div>
-                    </div>
-                    
-                    <div class="item">
-                        <h3><a href="PGCE-details.html">PGCE from University of Sunderland</a></h3>
-                        <p>Research Methods including action research, statistical analysis, mixed-methods, case- studies and more. Program development and educational theory</p>
-                        <div class="date">2015</div>
-                    </div>
-                    
-                    <div class="item">
-                        <h3><a href="MAAPY-details.html">MA Applied Anthropology at Univerity at Buffalo</a></h3>
-                        <p>Research methods focusing on Ethnography, Mixed Methods, Statitical analysis. Cross cultural competancy and program development</p>
-                        <div class="date">2007-2009</div>
-                    </div>
-
-					<div class="item">
-                        <h3><a href="BAAPY-details.html">BA Cultural Anthropology at Univerity at Buffalo</a></h3>
-                        <p>Qualitative and Quantitative research methods. Cross cultural interaction and understanding.</p>
-                        <div class="date">2001-2006</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Work Experience Column -->
-            <div class="column experience">
-                <div class="column-header">
-                    <h2>Work Experience</h2>
-                </div>
-                <div class="items-list">
-                    <div class="item">
-                        <h3><a href="edtech-details.html">Delta Global School: Education Technology Specialist</a></h3>
-                        <p>Delta Global school ed tech specialist, AI, Toddle, LanSchool, Data collection and analysis</p>
-                        <div class="date">2024 - Present</div>
-                    </div>
-                    
-                    <div class="item">
-                        <h3><a href="socialstudies-details.html">Delta Global SChool: Social Studies and AP Capstone</a></h3>
-                        <p>DGS AP Capstone, economics, comparative politics. Social studies curriculum development. Social emotional learning and mentoring in advisory class</p>
-                        <div class="date">2024-25</div>
-                    </div>
-                    
-                    <div class="item">
-                        <h3><a href="TsingHua-details.html">Tsinghua International School: Humanities teacher and project director</a></h3>
-                        <p>Humanities curiculum and lead teacher on ethnography project. AP US History. Homeroom committee co-chair</p>
-                        <div class="date">2022 - 2024</div>
-                    </div>
-                    
-                    <div class="item">
-                        <h3><a href="APGrader-details.html">College Board: AP Grader</a></h3>
-                        <p>Grader at 2024 AP US history in Kansas City</p>
-                        <div class="date">Summer 2024</div>
-                    </div>
-                    
-                    
-					
-					<div class="item">
-                        <h3><a href="dipontconference-details">Dipont Education: English Subject Panel and conference presenter</a></h3>
-                        <p>Individual presentations on student preperation for standardized tests, student centered learning. Engish curiculum committee findings.</p>
-                        <div class="date">2018 and 2019</div>
-					</div>
-					
-					<div class="item">
-                        <h3><a href="tfls-details.html">Dipont Education: Tianjin Foreign Language School: Head of Humanities and English </a></h3>
-                        <p>Led implementation of AP Capstone Program. Developed PBL program, pre-AP Literature, school magazine and theater night. AP Human Geography </p>
-                        <div class="date">2016-2022</div>
-					</div>
-
-					<div class="item">
-                        <h3><a href="zhzx-details.html">Dipont Education: Zhenhai High School: Head of English </a></h3>
-                        <p>IGCSE and A Level English. Member of school steering committee. Proctoring Cambridge exams. </p>
-                        <div class="date">2014-2016</div>
-					
-					</div>
-					<div class="item">
-						<h3><a href="Ambright-details.html">Ambright Education: Social studies teacher and curiculum development</a></h3>
-						<p> AP US history, World history. Developed pre-AP history curiculum. Interviewed teachers for employment</p>
-						<div class="date">2012-2014</div>
-					</div>
-					
-					<div class="item">
-						<h3><a href="Shane-details.html">Shane English School: Kids English Teacher</a></h3>
-						<p> Kids English age 3 to 15. Manage TAs in the classroom.</p>
-						<div class="date">2009-2011</div>
-					</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; James Stringer Portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
