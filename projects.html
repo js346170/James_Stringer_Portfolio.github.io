@@ -11,7 +11,82 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			/* New styles for prominent resume button */
+			.resume-button-container {
+				text-align: center;
+				margin: 1.5rem 0;
+			}
+			
+			.resume-button {
+				display: inline-block;
+				padding: 1rem 2rem;
+				background: #4a90e2;
+				color: white;
+				border-radius: 6px;
+				font-weight: bold;
+				font-size: 1.4rem;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+			
+			.resume-button:hover {
+				background: #3a7bc8;
+				transform: translateY(-2px);
+				box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+			}
+			
+			.resume-button i {
+				margin-right: 10px;
+			}
+			
+			.resume-subtext {
+				display: block;
+				margin-top: 0.5rem;
+				font-size: 0.9rem;
+				color: #555;
+			}
+			
+			/* Enhanced contact section */
+			.contact-info {
+				margin-top: 2rem;
+				padding: 1.5rem;
+				background: #f5f9fc;
+				border-radius: 8px;
+				border-left: 4px solid #4a90e2;
+			}
+			
+			.contact-info h3 {
+				margin-top: 0;
+				color: #2c3e50;
+			}
+			
+			.contact-method {
+				display: flex;
+				align-items: center;
+				margin-bottom: 1rem;
+			}
+			
+			.contact-method i {
+				width: 30px;
+				font-size: 1.2rem;
+				color: #4a90e2;
+			}
+			
+			.contact-method a {
+				color: #3498db;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+			
+			.contact-method a:hover {
+				color: #2980b9;
+				text-decoration: underline;
+			}
+
+			/* Project cards styling */
 			.projects-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -74,6 +149,7 @@
 				font-size: 3rem;
 			}
 			
+			/* Project card background colors */
 			.project-card:nth-child(1) .image { background: #e74c3c; }
 			.project-card:nth-child(2) .image { background: #2ecc71; }
 			.project-card:nth-child(3) .image { background: #9b59b6; }
@@ -88,6 +164,27 @@
 			.project-card:nth-child(12) .image { background: #2980b9; }
 			.project-card:nth-child(13) .image { background: #f39c12; }
 			.project-card:nth-child(14) .image { background: #7f8c8d; }
+			.project-card:nth-child(15) .image { background: #3498db; }
+			.project-card:nth-child(16) .image { background: #e67e22; }
+			.project-card:nth-child(17) .image { background: #1abc9c; }
+			.project-card:nth-child(18) .image { background: #8e44ad; }
+
+			/* Color rotation pattern for any additional cards */
+			.project-card:nth-child(15n+1) .image { background: #e74c3c; }
+			.project-card:nth-child(15n+2) .image { background: #2ecc71; }
+			.project-card:nth-child(15n+3) .image { background: #9b59b6; }
+			.project-card:nth-child(15n+4) .image { background: #f1c40f; }
+			.project-card:nth-child(15n+5) .image { background: #1abc9c; }
+			.project-card:nth-child(15n+6) .image { background: #d35400; }
+			.project-card:nth-child(15n+7) .image { background: #34495e; }
+			.project-card:nth-child(15n+8) .image { background: #8e44ad; }
+			.project-card:nth-child(15n+9) .image { background: #16a085; }
+			.project-card:nth-child(15n+10) .image { background: #c0392b; }
+			.project-card:nth-child(15n+11) .image { background: #27ae60; }
+			.project-card:nth-child(15n+12) .image { background: #2980b9; }
+			.project-card:nth-child(15n+13) .image { background: #f39c12; }
+			.project-card:nth-child(15n+14) .image { background: #7f8c8d; }
+			.project-card:nth-child(15n+15) .image { background: #3498db; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -97,7 +194,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Projects <br/> James Stringer</a>
+						<a href="index.html" class="logo">Projects <br/> James Hayes Stringer</a>
 					</header>
 
 				<!-- Nav -->
@@ -117,7 +214,42 @@
 							<section class="post">
 								<header class="major">
 									<h1>Project Portfolio</h1>
-									<p>Look here for samples of my teaching, research and data analysis work. These are all outgrowths of my education, training, self study and work experience. Contact me at <a href="mailto:js346170@gmail.com">js346170@gmail.com</a> for more information.</p>
+									<p>Look here for samples of my curriculum design, research and data analysis. These projects grew out of my education, training, self-study and work experience.</p>
+									
+									<!-- Prominent Resume Button with Subtext -->
+									<div class="resume-button-container">
+										<a href="https://drive.google.com/file/d/1dFh5qqdQ8BOg99HCeN-tsBo1pagIXUxL/view?usp=sharing" 
+										   target="_blank" 
+										   class="resume-button">
+										  <i class="fas fa-file-pdf"></i> View My Resume
+										</a>
+										<span class="resume-subtext">See project details below</span>
+									</div>
+									
+									<!-- Enhanced Contact Information -->
+									<div class="contact-info">
+									  <h3>Contact Information</h3>
+									  
+									  <div class="contact-method">
+										<i class="fas fa-envelope"></i>
+										<a href="mailto:js346170@gmail.com">js346170@gmail.com</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-github"></i>
+										<a href="https://github.com/js346170" target="_blank">github.com/js346170</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-linkedin"></i>
+										<a href="https://www.linkedin.com/in/james-stringer-433b2120b" target="_blank">linkedin.com/in/james-stringer</a>
+									  </div>
+									  
+									  <div class="contact-method">
+										<i class="fab fa-whatsapp"></i>
+										<a href="https://wa.me/84832438819" target="_blank">+84 83 243 8819</a>
+									  </div>
+									</div>
 								</header>
 
 								<!-- Projects Grid -->
@@ -127,8 +259,8 @@
 											<i class="fas fa-chart-line"></i>
 										</div>
 										<div class="content">
-											<h2>Student Study Habits: Data Collection and Analysis</h2>
-											<p>Collection and statistical analysis of student preperation for TOEFL</p>
+											<h2>Research and Data Analysis: Student Study Habits</h2>
+											<p>Collection and statistical analysis of student preparation for TOEFL</p>
 											<a href="TOEFL_analysis.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -138,8 +270,8 @@
 											<i class="fas fa-search"></i>
 										</div>
 										<div class="content">
-											<h2>TOEFL Integration Project</h2>
-											<p>Developed school curiculum to emphasive TOEFL skills and vocabulary based on my research and analysis</p>
+											<h2>Curriculum Development: TOEFL Integration Project</h2>
+											<p>Developed school curriculum to emphasize TOEFL skills and vocabulary based on my research and analysis</p>
 											<a href="TOEFL_integration.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -149,8 +281,8 @@
 											<i class="fas fa-graduation-cap"></i>
 										</div>
 										<div class="content">
-											<h2>AP Capstone Leadership</h2>
-											<p>Developed, Implemented and Monitored AP Capstone program.</p>
+											<h2>Curriculum Development: AP Capstone Leadership</h2>
+											<p>Developed, implemented and monitored AP Capstone program.</p>
 											<a href="AP Leadership.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -160,8 +292,8 @@
 											<i class="fas fa-database"></i>
 										</div>
 										<div class="content">
-											<h2>SQL Analysis of Layoffs</h2>
-											<p>Cleaning and Exploratory Analysis of Layoffs in SQL.</p>
+											<h2>Data Analysis: SQL Analysis of Layoffs</h2>
+											<p>Data cleaning and exploratory analysis of tech layoffs in SQL.</p>
 											<a href="sql_analysis.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -171,28 +303,30 @@
 											<i class="fas fa-chart-bar"></i>
 										</div>
 										<div class="content">
-											<h2>Data Analyst Survey</h2>
-											<p>Data Analyst Survey with Power BI Dashboard.</p>
+											<h2>Data Analysis: Data Expert Survey</h2>
+											<p>Survey of data professionals with Power BI dashboard to present dynamic, complex information in accessible format.</p>
 											<a href="PowerBI_dataanalysts.html" class="button">View Project</a>
 										</div>
 									</div>
+									
 									<div class="project-card">
 										<div class="image">
 											<i class="fas fa-chart-bar"></i>
 										</div>
 										<div class="content">
-											<h2>Airbnb Tableau Visualization and Analysis</h2>
+											<h2>Data Analysis: Airbnb Tableau Visualization and Analysis</h2>
 											<p>Use of Tableau to visualize data provided by Airbnb on dashboard</p>
-											<a href="PowerBI_dataanalysts.html" class="button">View Project</a>
+											<a href="Tab_p1.html" class="button">View Project</a>
 										</div>
 									</div>
+									
 									<div class="project-card">
 										<div class="image">
 											<i class="fas fa-bicycle"></i>
 										</div>
 										<div class="content">
-											<h2>Bicycle Purchases Analysis</h2>
-											<p>Analysis and visualization of bicycle purchases.</p>
+											<h2>Data Analysis: Excel dashboard</h2>
+											<p>Analysis and visualization of market data.</p>
 											<a href="bicycle_excel.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -202,8 +336,8 @@
 											<i class="fas fa-gamepad"></i>
 										</div>
 										<div class="content">
-											<h2>Space Invaders Game</h2>
-											<p>Python Developed Space Invaders like game.</p>
+											<h2>Programming: Space Invaders Game</h2>
+											<p>Developed playable Space Invaders like game in Python.</p>
 											<a href="space_invaders.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -213,8 +347,8 @@
 											<i class="fas fa-book"></i>
 										</div>
 										<div class="content">
-											<h2>Learning Application</h2>
-											<p>Learning Application developed in Python.</p>
+											<h2>Programming: Learning Application</h2>
+											<p>Learning platform for student and teacher use, developed in Python.</p>
 											<a href="learning_log.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -224,8 +358,8 @@
 											<i class="fas fa-users"></i>
 										</div>
 										<div class="content">
-											<h2>Ethnographic Research</h2>
-											<p>Ethnographic Research Project: Development and Implementation.</p>
+											<h2>Curriculum Design: Ethnographic Research</h2>
+											<p>Development and implementation of a curriculum centered on student-conducted fieldwork and student-led anthropological analysis.</p>
 											<a href="ethnography_project.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -235,8 +369,8 @@
 											<i class="fas fa-university"></i>
 										</div>
 										<div class="content">
-											<h2>Oxbridge Research</h2>
-											<p>Oxbridge Research and Intervention.</p>
+											<h2>Research: Oxbridge Admissions Action Research</h2>
+											<p>Mixed-methods institutional research and analysis to address persistent deficits in student interviews for Oxbridge admissions.</p>
 											<a href="oxbridge.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -246,8 +380,8 @@
 											<i class="fas fa-tag"></i>
 										</div>
 										<div class="content">
-											<h2>Price Tracker</h2>
-											<p>Automated price tracking application.</p>
+											<h2>Programming: E-Commerce Price Tracker</h2>
+											<p>Automated price-tracking application.</p>
 											<a href="price_tracker.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -257,8 +391,8 @@
 											<i class="fas fa-theater-masks"></i>
 										</div>
 										<div class="content">
-											<h2>Drama Night</h2>
-											<p>Theater production organization and management.</p>
+											<h2>Curriculum Development: Drama Night</h2>
+											<p>A hands-on, year-long English class activity, integrated with the literary curriculum.</p>
 											<a href="drama_night.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -268,8 +402,8 @@
 											<i class="fas fa-newspaper"></i>
 										</div>
 										<div class="content">
-											<h2>School Journalism</h2>
-											<p>Development of school journalism program.</p>
+											<h2>Curriculum Development: School Journalism</h2>
+											<p>Development of school journalism programs, including student publications at two different institutions.</p>
 											<a href="school_journalism.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -279,8 +413,8 @@
 											<i class="fas fa-calendar-alt"></i>
 										</div>
 										<div class="content">
-											<h2>History Day</h2>
-											<p>Organization of school history day event.</p>
+											<h2>Curriculum Development: History Day</h2>
+											<p>A semester-long research initiative developing historical thinking skills and culminating in a school-wide event.</p>
 											<a href="history_day.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -290,8 +424,8 @@
 											<i class="fas fa-chalkboard-teacher"></i>
 										</div>
 										<div class="content">
-											<h2>English Subject Panel</h2>
-											<p>English Subject Panel and Dipont Conference.</p>
+											<h2>Curriculum Development: English Subject Panel</h2>
+											<p>Committee work and presentations to colleagues at Dipont Education Conference.</p>
 											<a href="dipont_conference_project.html" class="button">View Project</a>
 										</div>
 									</div>
@@ -301,9 +435,20 @@
 											<i class="fas fa-project-diagram"></i>
 										</div>
 										<div class="content">
-											<h2>Project Based Learning</h2>
-											<p>Project Based Learning Curriculum Development.</p>
+											<h2>Curriculum Development: Project Based Learning</h2>
+											<p>A flexible course designed to capitalize on student interests, support student initiative, and reinforce problem-solving skills.</p>
 											<a href="pbl.html" class="button">View Project</a>
+										</div>
+									</div>
+									
+									<div class="project-card">
+										<div class="image">
+											<i class="fas fa-laptop-code"></i>
+										</div>
+										<div class="content">
+											<h2>Programming: Portfolio Website</h2>
+											<p>Customized HTML5 template into professional portfolio showcasing my projects and skills.</p>
+											<a href="port_web.html" class="button">View Project</a>
 										</div>
 									</div>
 								</div>
@@ -327,7 +472,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 	</body>
 </html>
