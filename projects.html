@@ -1,477 +1,178 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Project Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-		<style>
-			/* New styles for prominent resume button */
-			.resume-button-container {
-				text-align: center;
-				margin: 1.5rem 0;
-			}
-			
-			.resume-button {
-				display: inline-block;
-				padding: 1rem 2rem;
-				background: #4a90e2;
-				color: white;
-				border-radius: 6px;
-				font-weight: bold;
-				font-size: 1.4rem;
-				text-decoration: none;
-				transition: all 0.3s ease;
-				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-			}
-			
-			.resume-button:hover {
-				background: #3a7bc8;
-				transform: translateY(-2px);
-				box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-			}
-			
-			.resume-button i {
-				margin-right: 10px;
-			}
-			
-			.resume-subtext {
-				display: block;
-				margin-top: 0.5rem;
-				font-size: 0.9rem;
-				color: #555;
-			}
-			
-			/* Enhanced contact section */
-			.contact-info {
-				margin-top: 2rem;
-				padding: 1.5rem;
-				background: #f5f9fc;
-				border-radius: 8px;
-				border-left: 4px solid #4a90e2;
-			}
-			
-			.contact-info h3 {
-				margin-top: 0;
-				color: #2c3e50;
-			}
-			
-			.contact-method {
-				display: flex;
-				align-items: center;
-				margin-bottom: 1rem;
-			}
-			
-			.contact-method i {
-				width: 30px;
-				font-size: 1.2rem;
-				color: #4a90e2;
-			}
-			
-			.contact-method a {
-				color: #3498db;
-				text-decoration: none;
-				transition: color 0.3s;
-			}
-			
-			.contact-method a:hover {
-				color: #2980b9;
-				text-decoration: underline;
-			}
+<html lang="en">
 
-			/* Project cards styling */
-			.projects-container {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-				gap: 2rem;
-				margin-top: 2rem;
-			}
-			
-			.project-card {
-				background: #fff;
-				border-radius: 8px;
-				overflow: hidden;
-				box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-			
-			.project-card:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-			}
-			
-			.project-card .content {
-				padding: 1.5rem;
-			}
-			
-			.project-card h2 {
-				font-size: 1.4rem;
-				margin-bottom: 0.8rem;
-				color: #2c3e50;
-			}
-			
-			.project-card p {
-				color: #7f8c8d;
-				font-size: 0.95rem;
-				margin-bottom: 1.5rem;
-			}
-			
-			.project-card .button {
-				display: block;
-				text-align: center;
-				padding: 0.8rem;
-				background: #3498db;
-				color: white;
-				border-radius: 4px;
-				font-weight: 600;
-				transition: background 0.3s ease;
-			}
-			
-			.project-card .button:hover {
-				background: #2980b9;
-				text-decoration: none;
-			}
-			
-			.project-card .image {
-				height: 180px;
-				background: #f8f9fa;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: #bdc3c7;
-				font-size: 3rem;
-			}
-			
-			/* Project card background colors */
-			.project-card:nth-child(1) .image { background: #e74c3c; }
-			.project-card:nth-child(2) .image { background: #2ecc71; }
-			.project-card:nth-child(3) .image { background: #9b59b6; }
-			.project-card:nth-child(4) .image { background: #f1c40f; }
-			.project-card:nth-child(5) .image { background: #1abc9c; }
-			.project-card:nth-child(6) .image { background: #d35400; }
-			.project-card:nth-child(7) .image { background: #34495e; }
-			.project-card:nth-child(8) .image { background: #8e44ad; }
-			.project-card:nth-child(9) .image { background: #16a085; }
-			.project-card:nth-child(10) .image { background: #c0392b; }
-			.project-card:nth-child(11) .image { background: #27ae60; }
-			.project-card:nth-child(12) .image { background: #2980b9; }
-			.project-card:nth-child(13) .image { background: #f39c12; }
-			.project-card:nth-child(14) .image { background: #7f8c8d; }
-			.project-card:nth-child(15) .image { background: #3498db; }
-			.project-card:nth-child(16) .image { background: #e67e22; }
-			.project-card:nth-child(17) .image { background: #1abc9c; }
-			.project-card:nth-child(18) .image { background: #8e44ad; }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Samples | James Stringer Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-			/* Color rotation pattern for any additional cards */
-			.project-card:nth-child(15n+1) .image { background: #e74c3c; }
-			.project-card:nth-child(15n+2) .image { background: #2ecc71; }
-			.project-card:nth-child(15n+3) .image { background: #9b59b6; }
-			.project-card:nth-child(15n+4) .image { background: #f1c40f; }
-			.project-card:nth-child(15n+5) .image { background: #1abc9c; }
-			.project-card:nth-child(15n+6) .image { background: #d35400; }
-			.project-card:nth-child(15n+7) .image { background: #34495e; }
-			.project-card:nth-child(15n+8) .image { background: #8e44ad; }
-			.project-card:nth-child(15n+9) .image { background: #16a085; }
-			.project-card:nth-child(15n+10) .image { background: #c0392b; }
-			.project-card:nth-child(15n+11) .image { background: #27ae60; }
-			.project-card:nth-child(15n+12) .image { background: #2980b9; }
-			.project-card:nth-child(15n+13) .image { background: #f39c12; }
-			.project-card:nth-child(15n+14) .image { background: #7f8c8d; }
-			.project-card:nth-child(15n+15) .image { background: #3498db; }
-		</style>
-	</head>
-	<body class="is-preload">
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Projects <br/> James Hayes Stringer</a>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">James Stringer</a>
+            <p>Experience | Projects | Samples</p>
+        </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="experience.html">Experience</a></li>
-							<li class="active"><a href="projects.html">Projects</a></li>
-							<li><a href="samples.html">Samples</a></li>
-						</ul>
-					</nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="active"><a href="samples.html">Samples</a></li>
+            </ul>
+        </nav>
 
-				<!-- Main -->
-					<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-						<!-- Post -->
-							<section class="post">
-								<header class="major">
-									<h1>Project Portfolio</h1>
-									<p>Look here for samples of my curriculum design, research and data analysis. These projects grew out of my education, training, self-study and work experience.</p>
-									
-									<!-- Prominent Resume Button with Subtext -->
-									<div class="resume-button-container">
-										<a href="https://drive.google.com/file/d/1dFh5qqdQ8BOg99HCeN-tsBo1pagIXUxL/view?usp=sharing" 
-										   target="_blank" 
-										   class="resume-button">
-										  <i class="fas fa-file-pdf"></i> View My Resume
-										</a>
-										<span class="resume-subtext">See project details below</span>
-									</div>
-									
-									<!-- Enhanced Contact Information -->
-									<div class="contact-info">
-									  <h3>Contact Information</h3>
-									  
-									  <div class="contact-method">
-										<i class="fas fa-envelope"></i>
-										<a href="mailto:js346170@gmail.com">js346170@gmail.com</a>
-									  </div>
-									  
-									  <div class="contact-method">
-										<i class="fab fa-github"></i>
-										<a href="https://github.com/js346170" target="_blank">github.com/js346170</a>
-									  </div>
-									  
-									  <div class="contact-method">
-										<i class="fab fa-linkedin"></i>
-										<a href="https://www.linkedin.com/in/james-stringer-433b2120b" target="_blank">linkedin.com/in/james-stringer</a>
-									  </div>
-									  
-									  <div class="contact-method">
-										<i class="fab fa-whatsapp"></i>
-										<a href="https://wa.me/84832438819" target="_blank">+84 83 243 8819</a>
-									  </div>
-									</div>
-								</header>
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Samples of My Work</h1>
+                    <p>Explore samples from my teaching, writing, and professional projects.</p>
+                </header>
 
-								<!-- Projects Grid -->
-								<div class="projects-container">
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-chart-line"></i>
-										</div>
-										<div class="content">
-											<h2>Research and Data Analysis: Student Study Habits</h2>
-											<p>Collection and statistical analysis of student preparation for TOEFL</p>
-											<a href="TOEFL_analysis.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-search"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: TOEFL Integration Project</h2>
-											<p>Developed school curriculum to emphasize TOEFL skills and vocabulary based on my research and analysis</p>
-											<a href="TOEFL_integration.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-graduation-cap"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: AP Capstone Leadership</h2>
-											<p>Developed, implemented and monitored AP Capstone program.</p>
-											<a href="AP Leadership.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-database"></i>
-										</div>
-										<div class="content">
-											<h2>Data Analysis: SQL Analysis of Layoffs</h2>
-											<p>Data cleaning and exploratory analysis of tech layoffs in SQL.</p>
-											<a href="sql_analysis.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-chart-bar"></i>
-										</div>
-										<div class="content">
-											<h2>Data Analysis: Data Expert Survey</h2>
-											<p>Survey of data professionals with Power BI dashboard to present dynamic, complex information in accessible format.</p>
-											<a href="PowerBI_dataanalysts.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-chart-bar"></i>
-										</div>
-										<div class="content">
-											<h2>Data Analysis: Airbnb Tableau Visualization and Analysis</h2>
-											<p>Use of Tableau to visualize data provided by Airbnb on dashboard</p>
-											<a href="Tab_p1.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-bicycle"></i>
-										</div>
-										<div class="content">
-											<h2>Data Analysis: Excel dashboard</h2>
-											<p>Analysis and visualization of market data.</p>
-											<a href="bicycle_excel.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-gamepad"></i>
-										</div>
-										<div class="content">
-											<h2>Programming: Space Invaders Game</h2>
-											<p>Developed playable Space Invaders like game in Python.</p>
-											<a href="space_invaders.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-book"></i>
-										</div>
-										<div class="content">
-											<h2>Programming: Learning Application</h2>
-											<p>Learning platform for student and teacher use, developed in Python.</p>
-											<a href="learning_log.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-users"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Design: Ethnographic Research</h2>
-											<p>Development and implementation of a curriculum centered on student-conducted fieldwork and student-led anthropological analysis.</p>
-											<a href="ethnography_project.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-university"></i>
-										</div>
-										<div class="content">
-											<h2>Research: Oxbridge Admissions Action Research</h2>
-											<p>Mixed-methods institutional research and analysis to address persistent deficits in student interviews for Oxbridge admissions.</p>
-											<a href="oxbridge.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-tag"></i>
-										</div>
-										<div class="content">
-											<h2>Programming: E-Commerce Price Tracker</h2>
-											<p>Automated price-tracking application.</p>
-											<a href="price_tracker.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-theater-masks"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: Drama Night</h2>
-											<p>A hands-on, year-long English class activity, integrated with the literary curriculum.</p>
-											<a href="drama_night.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-newspaper"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: School Journalism</h2>
-											<p>Development of school journalism programs, including student publications at two different institutions.</p>
-											<a href="school_journalism.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-calendar-alt"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: History Day</h2>
-											<p>A semester-long research initiative developing historical thinking skills and culminating in a school-wide event.</p>
-											<a href="history_day.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-chalkboard-teacher"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: English Subject Panel</h2>
-											<p>Committee work and presentations to colleagues at Dipont Education Conference.</p>
-											<a href="dipont_conference_project.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-project-diagram"></i>
-										</div>
-										<div class="content">
-											<h2>Curriculum Development: Project Based Learning</h2>
-											<p>A flexible course designed to capitalize on student interests, support student initiative, and reinforce problem-solving skills.</p>
-											<a href="pbl.html" class="button">View Project</a>
-										</div>
-									</div>
-									
-									<div class="project-card">
-										<div class="image">
-											<i class="fas fa-laptop-code"></i>
-										</div>
-										<div class="content">
-											<h2>Programming: Portfolio Website</h2>
-											<p>Customized HTML5 template into professional portfolio showcasing my projects and skills.</p>
-											<a href="port_web.html" class="button">View Project</a>
-										</div>
-									</div>
-								</div>
-							</section>
-					</div>
+                <div class="content">
+                    <p>Below are categorized samples, code, and resources relevant to my data, AP, and research projects.</p>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<p>Contact me at <a href="mailto:js346170@gmail.com">js346170@gmail.com</a></p>
-						</section>
-					</footer>
+                    <div class="sample-list">
+                        <h2>Code and GitHub</h2>
+                        <ul>
+                            <li><a href="https://github.com/js346170">GitHub Profile</a></li>
+                        </ul>
 
-			</div>
+                        <h2>Visualizations</h2>
+<ul>
+    <li>
+        <div class='tableauPlaceholder' id='vizContainer' style='width: 100%; height: 600px;'>
+            <noscript>
+                <a href='https://public.tableau.com/views/AirbnbDashboard_17520360503670/Dashboard1'>
+                    <img alt='Airbnb Dashboard' src='https://public.tableau.com/static/images/Ai/AirbnbDashboard_17520360503670/Dashboard1/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' width='100%' height='600' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='path' value='views/AirbnbDashboard_17520360503670/Dashboard1' />
+                <param name='site_root' value='' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Ai/AirbnbDashboard_17520360503670/Dashboard1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            document.addEventListener('DOMContentLoaded', function() {
+                var container = document.getElementById('vizContainer');
+                var vizElement = container.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (container.offsetWidth * 0.75) + 'px';
+                
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            });
+        </script>
+    </li>
+    <li>
+    <a href="https://drive.google.com/file/d/1slqEzaJxHXlXTSbnmFZ5dVBLp34zc9fi/view?usp=sharing" target="_blank">
+        <img src="images/pbi.png" alt="Survey of Data Experts - Power BI" style="width:100%; max-width:800px; border: 1px solid #ccc;"/>
+    </a>
+    <p><strong>Survey of Data Experts</strong> – Click the image to view the full interactive Power BI report.</p>
+</li>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <li><a href="https://docs.google.com/document/d/1Nw_cc4oXs4zU--eEGyXViwEwX6-vRPzG/edit?usp=sharing">Excel: TOEFL Analysis</a></li>
+</ul>
 
-	</body>
+                        <h2>AP Materials</h2>
+                        <ul>
+                            <li><strong>Syllabus</strong></li>
+                            <li><a href="https://docs.google.com/document/d/10u70-sbpESsGGlX-XwnFdHDSp0PSrmTH/edit?usp=sharing">AP Seminar Syllabus</a></li>
+                            <li><a href="https://drive.google.com/file/d/1iYO0z0nIYeZbuwKrgZ2KEz0oV_ri1iPP/view?usp=sharing">AP Research Syllabus </a></li>
+                            <li><strong>Student Work</strong></li>
+                            <li><a href="https://drive.google.com/file/d/1Tc5bf6lk5MN-RNL3pHRa1Vqp2DaxqQbu/view?usp=sharing">Student Work Sample Individual Written Argument</a></li>
+                            <li><a href="https://drive.google.com/file/d/1-RllL3Q15rbChxXSq714CPP8QZy3mmZx/view?usp=sharing">Student Work Sample 2</a></li>
+                            <li><a href="https://drive.google.com/file/d/15zGL41Eb683D-PN-hsQfCfTAPDOoSjuT/view?usp=sharing">Student Work Sample 3</a></li>
+                        </ul>
+
+                        <h2>Research</h2>
+                        <ul>
+                            <li><strong>Ethics</strong></li>
+                            <li><a href="https://docs.google.com/document/d/1uMGdLscAM4LJO5a91fe_LQ0WahukdoYS/edit?usp=sharing">Research Ethics Document</a></li>
+                            <li><strong>Instruments</strong></li>
+                            <li><a href="https://docs.google.com/document/d/15E89FXYjwhBTsguTboPPr9zLLE00DvPd/edit?usp=sharing">Instrument Sample 1</a></li>
+                            <li><a href="https://docs.google.com/document/d/1ig4mLLRMuLPdP_s-oUyXpz5UNy1fz-y6/edit?usp=sharing">Instrument Sample 2</a></li>
+                            <li><a href="https://docs.google.com/document/d/1HEnEwsMVGZY1fECZARmZkfPrq6lKSU5aZM4B_kI63H8/edit?usp=sharing">Instrument Sample 3</a></li>
+                            <li><a href="https://docs.google.com/document/d/1Vm_893wDFDH_r2AADFbykvWnw45wnArQIomYypMdqKg/edit?usp=sharing">Instrument Sample 4</a></li>
+                            <li><a href="https://docs.google.com/document/d/1uKHuO6lOnsKrzV_JOVeLhh25gXgyXTSX/edit?usp=sharing">Instrument Sample 5</a></li>
+                        </ul>
+
+                        <h2>Presentations</h2>
+                        <ul>
+                            <li><a href="https://docs.google.com/presentation/d/1yvcvTmN7OhBJA6KLxWdQVBGTbcfSuubU/edit?usp=sharing">Presentation 1</a></li>
+                            <li><a href="https://docs.google.com/presentation/d/1MWo00jZSUL6ydW8a2Zv282sJJ24ujQq5/edit?usp=sharing">Presentation 2</a></li>
+                            <li><a href="https://docs.google.com/presentation/d/1xr3lgVAmDtC6DECVf1rcNXKBLaJf8P5G/edit?usp=sharing">Presentation 3</a></li>
+                        </ul>
+
+                        <h2>Writing Samples</h2>
+                        <ul>
+                            <li><a href="https://docs.google.com/document/d/1O8yzbTWYTv3Qa26epOxAE3Ub_RzHwcbC/edit?usp=sharing">Writing Sample 1</a></li>
+                            <li><a href="https://docs.google.com/document/d/1ZmI4M_D-RIBMJQgXhx9A7DkmkwD0wYWY/edit?usp=sharing">Writing Sample 2</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" /></li>
+                    </ul>
+                </form>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
