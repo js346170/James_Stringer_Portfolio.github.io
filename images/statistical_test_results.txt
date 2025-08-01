@@ -1,0 +1,2 @@
+U-statistic: 402.0, p-value: 1.5362074615269044e-16
+Effect size (r): 0.824
