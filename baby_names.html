@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Names Analysis | James Stringer</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+        }
+        .project-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .project-links a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .project-links a:hover {
+            background-color: #555;
+        }
+        .project-description {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../samples.html">Samples</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-container">
+        <h1>Baby Names Data Analysis</h1>
+        
+        <div class="project-description">
+            <p>This project analyzes trends in baby names over time using a comprehensive dataset. The analysis includes:</p>
+            <ul>
+                <li>Popularity trends for specific names (like "Joseph" and "Luna")</li>
+                <li>Diversity metrics including Shannon Entropy and Herfindahl-Hirschman Index</li>
+                <li>Statistical analysis of name diversity changes over time</li>
+                <li>Visualizations of naming patterns by first letter and gender</li>
+            </ul>
+            <p>The project demonstrates skills in data cleaning, statistical analysis, and visualization using Python, Pandas, and Matplotlib.</p>
+        </div>
+
+        <div class="project-links">
+            <a href="https://github.com/js346170/baby-names" target="_blank">View on GitHub</a>
+            <a href="https://drive.google.com/drive/folders/1Q5ECL-h8WQpZUjs6PFwK9o_8pi9DuMYm?usp=sharing" target="_blank">View on Google Drive</a>
+        </div>
+
+        <img src="../images/entropy_boxplot.png" alt="Name Diversity Analysis" class="project-image">
+        
+        <div class="project-description">
+            <h2>Key Findings</h2>
+            <p>The analysis revealed several interesting patterns:</p>
+            <ul>
+                <li>A significant increase in name diversity over time (confirmed by statistical tests)</li>
+                <li>Changing popularity of names starting with different letters</li>
+                <li>Gender differences in naming trends</li>
+                <li>The decline in dominance of traditional top names</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 James Stringer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
