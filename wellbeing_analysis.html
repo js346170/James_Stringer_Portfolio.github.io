@@ -1,0 +1,446 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>School Wellbeing Survey Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* Project-specific styling */
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .project-header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .key-findings {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 2rem 0;
+        }
+        
+        .key-findings h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .key-findings ul {
+            padding-left: 1.5rem;
+        }
+        
+        .key-findings li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .methodology-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
+        }
+        
+        .methodology-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .data-visualization {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .data-visualization img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .recommendations {
+            background: #e8f4fc;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .recommendations h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .timeline {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #3498db;
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.6rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #3498db;
+        }
+        
+        .timeline-item h4 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .resource-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .resource-link:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .resource-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">James Stringer <br> Projects</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="samples.html">Samples</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="main">
+            <article class="post">
+                <header class="project-header">
+                    <h1>School Wellbeing Survey Analysis</h1>
+                    <p>Comprehensive analysis of 2024-2025 student wellbeing data leading to reevaluation of data collection methods and wellbeing policies</p>
+                </header>
+
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>This project involved designing, implementing, and analyzing a comprehensive student wellbeing survey at Delta Global School. The research aimed to understand student emotional, mental, and social experiences to identify areas for support and drive positive change in school policies and programs.</p>
+                    
+                    <div class="key-findings">
+                        <h3>Key Objectives</h3>
+                        <ul>
+                            <li>Understand student wellbeing across emotional, mental, and social dimensions</li>
+                            <li>Identify key wellbeing challenges including stress, workload, and access to support</li>
+                            <li>Use data to inform programs, policies, and initiatives to strengthen the school community</li>
+                            <li>Develop improved data collection methodologies for future assessment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <p>The study employed a mixed-methods approach, combining quantitative survey data with qualitative insights to provide a comprehensive understanding of student wellbeing.</p>
+                    
+                    <div class="methodology-grid">
+                        <div class="methodology-card">
+                            <h3>Survey Design</h3>
+                            <p>Developed a comprehensive survey measuring multiple dimensions of student wellbeing using Likert-scale questions and open-ended responses.</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Data Collection</h3>
+                            <p>Administered surveys to middle and high school students across three terms (Fall 2024, Winter 2024, Spring 2025) to track changes over time.</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Statistical Analysis</h3>
+                            <p>Used ANOVA to compare means across multiple groups and terms, identifying statistically significant changes in wellbeing indicators.</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Qualitative Follow-up</h3>
+                            <p>Conducted focus groups and interviews to contextualize quantitative findings and gather in-depth student perspectives.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Key Findings</h2>
+                    
+                    <div class="key-findings">
+                        <h3>Overall Trends</h3>
+                        <ul>
+                            <li>Student wellbeing remained relatively stable across the school year with minor fluctuations</li>
+                            <li>High school students reported notable improvement in workload management by Term 3</li>
+                            <li>Middle school students consistently felt supported by teachers and advisors</li>
+                            <li>Stress levels remained moderate across all terms with no significant increases</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Outlier Analysis</h3>
+                    <p>Identified student subgroups whose experiences differed significantly from the overall positive trends, highlighting the importance of looking beyond averages to understand the full picture of student wellbeing.</p>
+                    
+                    <div class="data-visualization">
+                        <img src="images/outlier_chart.png" alt="Outlier Analysis Chart">
+                        <p class="image-caption">Visualization of outlier students whose experiences differed significantly from overall trends</p>
+                    </div>
+                    
+                    <div class="key-findings">
+                        <h3>Critical Questions from Outlier Analysis</h3>
+                        <ul>
+                            <li>Who are the outliers in our wellbeing data?</li>
+                            <li>What specific challenges do these students face?</li>
+                            <li>How can we better support these student subgroups?</li>
+                            <li>What changes to our data collection would help identify these students earlier?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Statistical Analysis</h2>
+                    <p>Used Analysis of Variance (ANOVA) to determine whether changes in wellbeing across terms were statistically significant or due to random variation.</p>
+                    
+                    <div class="methodology-grid">
+                        <div class="methodology-card">
+                            <h3>F-value</h3>
+                            <p>Measured how much group means differed between terms, with higher values indicating more substantial differences.</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>P-value</h3>
+                            <p>Determined statistical significance, with values below 0.05 indicating changes were unlikely due to chance.</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Effect Size (η²)</h3>
+                            <p>Measured the practical significance of findings, distinguishing between statistically significant and educationally meaningful changes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="data-visualization">
+                        <img src="https://via.placeholder.com/800x400?text=ANOVA+Results+Visualization" alt="Statistical Analysis Results">
+                        <p class="image-caption">Visualization of ANOVA results showing significant changes across terms</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Research Implications</h2>
+                    
+                    <div class="key-findings">
+                        <h3>What We Know</h3>
+                        <ul>
+                            <li>Overall patterns of student wellbeing across the school year</li>
+                            <li>Areas of strength in teacher and advisor support</li>
+                            <li>Workload management improvements in high school</li>
+                            <li>Consistent moderate stress levels across terms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-findings">
+                        <h3>What We Don't Know</h3>
+                        <ul>
+                            <li>Why certain wellbeing areas improved or declined</li>
+                            <li>How individual student experiences differ beyond averages</li>
+                            <li>The impact of external factors (exams, events) on wellbeing</li>
+                            <li>The effectiveness of current support strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Recommendations & Future Research</h2>
+                    
+                    <div class="recommendations">
+                        <h3>Proposed Data Collection Improvements</h3>
+                        <ul>
+                            <li>Collect demographic data to better identify subgroup differences</li>
+                            <li>Implement longitudinal tracking of individual students</li>
+                            <li>Add qualitative components to understand the "why" behind the numbers</li>
+                            <li>Develop targeted surveys for identified at-risk groups</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Research Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Phase 1: Qualitative Data Collection</h4>
+                            <p>Conduct focus groups and interviews to gather in-depth student insights</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>Phase 2: Survey Refinement</h4>
+                            <p>Use qualitative findings to improve quantitative survey instruments</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>Phase 3: Expanded Data Collection</h4>
+                            <p>Implement improved surveys with broader demographic tracking</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4>Phase 4: Policy Development</h4>
+                            <p>Develop targeted wellbeing policies based on comprehensive findings</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendations">
+                        <h3>Proposed Wellbeing Initiatives</h3>
+                        <ul>
+                            <li>Targeted support programs for identified outlier groups</li>
+                            <li>Workload management strategies for high school students</li>
+                            <li>Enhanced advisor training based on student feedback</li>
+                            <li>Regular wellbeing check-ins rather than annual surveys</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Project Resources</h2>
+                    
+                    <div class="resource-links">
+                        <a href="Delta Global School Wellness Data2.pptx" class="resource-link" download>
+                            <i class="fas fa-file-powerpoint"></i> Download Presentation Slides
+                        </a>
+                        
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-chart-bar"></i> View Full Data Analysis
+                        </a>
+                        
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Research Methodology Document
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Skills Demonstrated</h2>
+                    
+                    <div class="methodology-grid">
+                        <div class="methodology-card">
+                            <h3>Research Design</h3>
+                            <p>Developed comprehensive mixed-methods research approach</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Data Analysis</h3>
+                            <p>Applied statistical methods including ANOVA to educational data</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Survey Methodology</h3>
+                            <p>Designed and implemented effective data collection instruments</p>
+                        </div>
+                        
+                        <div class="methodology-card">
+                            <h3>Educational Leadership</h3>
+                            <p>Translated research findings into actionable policy recommendations</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <p>Contact me at <a href="mailto:js346170@gmail.com">js346170@gmail.com</a></p>
+            </section>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
