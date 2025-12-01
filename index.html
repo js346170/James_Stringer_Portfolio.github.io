@@ -50,8 +50,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     
     <style>
-      /* [KEEP ALL YOUR EXISTING CSS STYLES EXACTLY AS THEY ARE] */
-    <style>
       /* Mobile-first responsive styles */
       @media (max-width: 768px) {
         /* Improve menu visibility */
@@ -128,8 +126,8 @@
           margin: 0 10px;
         }
         
-        /* TOEFL Highlight Card */
-        .tofel-highlight-card {
+        /* AI Highlight Card */
+        .ai-highlight-card {
           grid-column: 1;
         }
         
@@ -168,6 +166,19 @@
         line-height: 1.6;
       }
       
+      /* News section spacing */
+      .news-section h3 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+      
+      .news-section ul {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 1.2rem;
+      }
+      
       .highlights-section {
         margin-top: 3rem;
         padding: 0 15px;
@@ -203,30 +214,92 @@
         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
       }
       
-      /* TOEFL Highlight Card - Full width */
-      .tofel-highlight-card {
+      /* AI Highlight Card - Full width */
+      .ai-highlight-card {
         grid-column: 1 / -1;
-        background: #f5f9fc;
-        border-left: 4px solid #4a90e2;
+        background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%);
+        border-left: 4px solid #3498db;
+        margin-bottom: 2rem;
       }
       
-      .tofel-highlight-content {
+      .ai-highlight-content {
         padding: 2rem;
       }
       
-      .tofel-highlight-content h3 {
+      .ai-highlight-content h3 {
         font-size: 1.8rem;
         color: #2c3e50;
         margin-top: 0;
         text-align: center;
       }
       
-      .tofel-highlight-button {
-        background: #4a90e2;
+      .ai-highlight-content ul {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
       }
       
-      .tofel-highlight-button:hover {
-        background: #3a7bc8;
+      .ai-highlight-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+      
+      /* Highlight buttons container */
+      .highlight-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+      }
+      
+      /* AI highlight button */
+      .ai-highlight-button {
+        background: #3498db;
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .ai-highlight-button:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+      }
+      
+      /* Power BI button */
+      .powerbi-button {
+        background: #f2c811;
+        color: #000;
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .powerbi-button:hover {
+        background: #e0b60f;
+        transform: translateY(-2px);
+      }
+      
+      /* Responsive adjustments for highlight buttons */
+      @media (max-width: 768px) {
+        .highlight-buttons {
+          flex-direction: column;
+        }
+        
+        .ai-highlight-button, .powerbi-button {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
       }
       
       /* New styles for project images */
@@ -264,12 +337,15 @@
       }
       
       .python-project {
-        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                         url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
       }
       
       .game-project {
         background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
+      }
+      
+      .tofel-project {
+        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');
       }
       
       .highlight-content {
@@ -361,25 +437,36 @@
         min-width: 300px;
       }
       
-      /* Center header content */
+      /* Center header content and adjust date spacing */
       #header {
         text-align: center;
+      }
+      
+      .post.featured header.major .date {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #666;
       }
       
       /* Headshot image styling */
       .headshot {
         max-width: 300px;
         border-radius: 8px;
-        margin: 0 auto;
+        margin: 1rem auto;
         display: block;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+      
+      /* Remove arrow button styles */
+      #intro .actions {
+        display: none;
       }
     </style>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper" class="fade-in">
-            <!-- Intro -->
+      <!-- Intro -->
       <div id="intro">
         <h1>James Hayes Stringer</h1>
         <p>
@@ -392,15 +479,7 @@
           ><br />
           <a href="https://github.com/js346170">GitHub</a>
         </p>
-        <ul class="actions">
-          <li>
-            <a
-              href="#header"
-              class="button icon solid solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
-        </ul>
+        <!-- Removed the arrow button -->
       </div>
 
       
@@ -457,30 +536,32 @@
             </div>
           </section>
 
-          <!--This will be a YOUTUBE Video Introduction-->
+          <!-- News Section -->
           <div class="news-section">
-            <h3>News: Fall 2025</h3>
-		  <li>Econometrics 1 and Elements of Discrete Mathematics 1 at OSU</li>
-		  <li>Presenting anlysis of student welfare data to senior leadership team</li>
-		  <li>Presenting 'AI in the Classroom' to staff at indcution</li>
-		  <li>Taking over leadership of AI professional learning community</li>
-		  <li>Teaching AP Research, AP Microeconomics and AP Comparative Government</li>
-            <h3>News: Summer 2025</h3>
+            <h3>Winter 2025-2026</h3>
             <ul class="news-bullets">
-              <li> Awarded "Academic Commendation" in Economics by OSU economics department</li>
-              <li>
-                Behavioral Economics and Computer Science 1 at Oregon
-                State University
-              </li>
-              <li>
-                Extracting evidence-based insights from wellness data to inform
-                current presentations and shape next year's research priorities
-              </li>
+              <li>Intermediate Macro and Environmental Economics at Oregon State University</li>
+              <li>Completing AI in Practice certification at Delft University</li>
+              <li>AI interventions: Toddle AI, AI Research Protocol, and Socratic AI Tutor as part of AI Professional Learning Community</li>
+              <li>Continuing student wellness data analysis and reporting</li>
+            </ul>
+            
+            <h3>Fall 2025</h3>
+            <ul class="news-bullets">
+              <li>Econometrics 1 at Oregon State University</li>
+              <li>Presenting analysis of student welfare data to senior leadership team</li>
+              <li>Presenting 'AI in the Classroom' to staff at induction</li>
+              <li>Taking over leadership of AI professional learning community</li>
+              <li>Teaching AP Research, AP Microeconomics and AP Comparative Government</li>
+            </ul>
+            
+            <h3>Summer 2025</h3>
+            <ul class="news-bullets">
+              <li>Awarded "Academic Commendation" in Economics by OSU economics department</li>
+              <li>Behavioral Economics and Computer Science 1 at Oregon State University</li>
+              <li>Extracting evidence-based insights from wellness data to inform current presentations and shape next year's research priorities</li>
               <li>Preparing to teach AP Microeconomics</li>
-              <li>
-                Researching statistical models for student performance
-                prediction
-              </li>
+              <li>Researching statistical models for student performance prediction</li>
             </ul>
           </div>
         </article>
@@ -489,19 +570,41 @@
         <section class="highlights-section">
           <h2>Portfolio Highlights</h2>
           <div class="highlight-grid">
-            <!-- TOEFL Highlight Card - Full width at top -->
-            <div class="highlight-card tofel-highlight-card">
-              <div class="tofel-highlight-content">
-                <h3>TOEFL Curriculum Reform</h3>
-                <p>Led research-driven reforms at Tianjin FLS that increased average TOEFL scores from 78 to 93 in two years. This action research project transformed our English curriculum through:</p>
+            
+            <!-- AI Survey Highlight Card - Full width at top -->
+            <div class="highlight-card ai-highlight-card">
+              <div class="ai-highlight-content">
+                <h3>AI Student Survey Analysis</h3>
+                <p>Lead data analyst for comprehensive research study examining AI usage patterns and attitudes among 220 middle and high school students at Delta Global School. Key findings include:</p>
                 <ul>
-                  <li>Vertical alignment of reading/writing subskills</li>
-                  <li>Integration of TOEFL-specific task types</li>
-                  <li>Cross-curricular vocabulary alignment</li>
-                  <li>Teacher training in TOEFL assessment methodologies</li>
+                  <li>Strong interest in AI for enjoyment and efficiency</li>
+                  <li>Significant gap between understanding limitations and taking preventive action</li>
+                  <li>Correlation between stress levels and AI dependency</li>
+                  <li>Paradoxical attitudes toward training and effectiveness</li>
                 </ul>
-                <p>The project demonstrated how strategic curriculum integration can achieve better results than traditional test prep while enhancing overall educational quality.</p>
-                <a href="tofel-integration.html" class="highlight-button tofel-highlight-button">View TOEFL Project</a>
+                <p>Features an interactive Power BI dashboard with real-time filtering and segmentation capabilities.</p>
+                <div class="highlight-buttons">
+                  <a href="ai_survey_analysis.html" class="highlight-button ai-highlight-button">
+                    <i class="fas fa-chart-line"></i> View Project Details
+                  </a>
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiYzcxNGZiNGMtYzA1Ny00YWVlLTgxMGMtZjRjMzgzNTBkYmJmIiwidCI6IjI3OTUxNDU2LWMxYjgtNDcxOC05ZGUwLTFkM2ZkNDc4N2I1NiIsImMiOjEwfQ%3D%3D" 
+                     target="_blank" 
+                     class="highlight-button powerbi-button">
+                    <i class="fas fa-external-link-alt"></i> Open Power BI Dashboard
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- TOEFL Highlight Card -->
+            <div class="highlight-card">
+              <div class="project-image tofel-project">
+                <div class="project-image-label">TOEFL Research & Reform</div>
+              </div>
+              <div class="highlight-content">
+                <h3>TOEFL Curriculum Reform</h3>
+                <p>Led research-driven reforms at Tianjin FLS that increased average TOEFL scores from 78 to 93 in two years through strategic curriculum integration.</p>
+                <a href="tofel-integration.html" class="highlight-button">View Project</a>
               </div>
             </div>
             
@@ -512,7 +615,7 @@
               </div>
               <div class="highlight-content">
                 <h3>Study Strategies Research Project</h3>
-                <p>Comprehensive research project focusing on students use of testwise strategies to study for standized tests.</p>
+                <p>Comprehensive research project focusing on students use of testwise strategies to study for standardized tests.</p>
                 <a href="MAed_project.html" class="highlight-button">View Project</a>
               </div>
             </div>
@@ -579,38 +682,16 @@
           </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Footer - Updated pagination -->
         <footer>
           <div class="pagination">
-            <a href="#" class="page active">1</a>
             <a href="projects.html" class="page">View All Projects →</a>
           </div>
         </footer>
       </div>
 
-      <!-- Footer -->
+      <!-- Footer - Removed contact form -->
       <footer id="footer">
-        <section>
-          <form method="post" action="#">
-            <div class="fields">
-              <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="3"></textarea>
-              </div>
-            </div>
-            <ul class="actions">
-              <li><input type="submit" value="Send Message" /></li>
-            </ul>
-          </form>
-        </section>
         <section class="split contact">
           <section class="alt">
             <h3>Email</h3>
