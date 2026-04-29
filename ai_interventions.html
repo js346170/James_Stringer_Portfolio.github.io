@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Generative AI in the Classroom – Three Data-Backed Strategies | James Stringer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			/* Conference badge */
+			.conference-badge {
+				display: inline-block;
+				background: #1a4a8a;
+				color: white;
+				padding: 0.6rem 1.2rem;
+				border-radius: 6px;
+				font-size: 0.95rem;
+				margin-bottom: 1.5rem;
+				font-weight: bold;
+			}
+
+			.conference-badge i { margin-right: 0.5rem; }
+
+			.conference-details {
+				background: #f0f4ff;
+				border-left: 4px solid #1a4a8a;
+				border-radius: 0 8px 8px 0;
+				padding: 1rem 1.5rem;
+				margin-bottom: 2rem;
+				font-size: 0.95rem;
+				color: #333;
+			}
+
+			.conference-details strong { color: #1a4a8a; }
+
+			/* Intervention cards */
+			.intervention-section {
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+				margin-bottom: 3rem;
+			}
+
+			.intervention-header {
+				padding: 1.2rem 1.5rem;
+				color: white;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.intervention-header h2 {
+				margin: 0;
+				font-size: 1.4rem;
+				border: none;
+			}
+
+			.intervention-header .step-num {
+				background: rgba(255,255,255,0.25);
+				border-radius: 50%;
+				width: 2.2rem;
+				height: 2.2rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				font-size: 1.1rem;
+				flex-shrink: 0;
+			}
+
+			.intervention-header.survey    { background: #2c7a3e; }
+			.intervention-header.toddle    { background: #1a4a8a; }
+			.intervention-header.protocol  { background: #7a3e2c; }
+
+			.intervention-body {
+				background: white;
+				padding: 1.8rem;
+			}
+
+			/* Stat callouts */
+			.stat-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				margin: 1.5rem 0;
+			}
+
+			.stat-box {
+				flex: 1;
+				min-width: 120px;
+				text-align: center;
+				background: #f8f9fb;
+				border-radius: 8px;
+				padding: 1rem 0.8rem;
+				border-top: 4px solid #4a90e2;
+			}
+
+			.stat-box.green  { border-color: #2c7a3e; }
+			.stat-box.blue   { border-color: #1a4a8a; }
+			.stat-box.brown  { border-color: #7a3e2c; }
+
+			.stat-number {
+				font-size: 2rem;
+				font-weight: bold;
+				color: #2c3e50;
+				line-height: 1;
+			}
+
+			.stat-label {
+				font-size: 0.8rem;
+				color: #666;
+				margin-top: 0.4rem;
+			}
+
+			/* Student quote */
+			.student-quote {
+				background: #f9f9fb;
+				border-left: 4px solid #aaa;
+				border-radius: 0 6px 6px 0;
+				padding: 1rem 1.3rem;
+				margin: 1rem 0;
+				font-style: italic;
+				color: #444;
+				font-size: 0.95rem;
+			}
+
+			.student-quote cite {
+				display: block;
+				margin-top: 0.5rem;
+				font-style: normal;
+				font-size: 0.85rem;
+				color: #888;
+			}
+
+			/* Power BI embed */
+			.powerbi-embed {
+				margin: 2rem 0;
+				border: 1px solid #e0e0e0;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+
+			.powerbi-embed iframe {
+				width: 100%;
+				border: none;
+			}
+
+			.embed-caption {
+				text-align: center;
+				padding: 1rem;
+				background: #f9f9f9;
+				margin: 0;
+				font-style: italic;
+				color: #666;
+				border-top: 1px solid #e0e0e0;
+			}
+
+			/* Methods list */
+			.method-steps {
+				counter-reset: steps;
+				list-style: none;
+				padding: 0;
+			}
+
+			.method-steps li {
+				counter-increment: steps;
+				display: flex;
+				gap: 1rem;
+				align-items: flex-start;
+				margin-bottom: 0.8rem;
+			}
+
+			.method-steps li::before {
+				content: counter(steps);
+				background: #4a90e2;
+				color: white;
+				border-radius: 50%;
+				width: 1.6rem;
+				height: 1.6rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.85rem;
+				font-weight: bold;
+				flex-shrink: 0;
+				margin-top: 0.1rem;
+			}
+
+			@media (max-width: 768px) {
+				.stat-number { font-size: 1.5rem; }
+				.powerbi-embed iframe { height: 400px; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+			<header id="header">
+				<a href="index.html" class="logo">James Stringer <br/> Project</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="samples.html">Samples</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<h2>Generative AI in the Classroom</h2>
+						<p>Four Data-Backed Strategies for AI Use in AP</p>
+					</header>
+
+					<div class="conference-badge">
+						<i class="fas fa-chalkboard-teacher"></i> AP Annual Conference Presentation
+					</div>
+
+					<div class="conference-details">
+						<strong>AP Annual Conference &mdash; Las Vegas</strong><br />
+						<strong>Date &amp; Time:</strong> July 23, 2026 | 11:20 AM &ndash; 12:35 PM PT<br />
+						<strong>Location:</strong> The Venetian, Level 2 | Veronese 2401 AB<br />
+						<a href="https://eventreg.collegeboard.org/event/af7e331a-a3f8-4934-bca7-9a44fc1820bd/summary" target="_blank">
+							<i class="fas fa-external-link-alt"></i> Conference Registration Page
+						</a>
+					</div>
+
+					<p>
+						This project documents a year-long, data-driven initiative at Delta Global School in Hanoi to move beyond reactive AI policing toward proactive AI literacy. Four structured interventions were designed, implemented, and measured with AP-level students — each generating student data, AI narratives, and reflections that informed the next phase. The results were presented to school leadership and form the basis of the AP Annual Conference session.
+					</p>
+				</article>
+
+				<!-- THEORETICAL FRAMEWORK -->
+				<section class="post">
+					<header>
+						<h2>Theoretical Framework</h2>
+					</header>
+					<p>The project is grounded in two complementary frameworks that explain both why students adopt AI and how that adoption can be shaped toward genuine learning.</p>
+					<div style="display:flex; flex-wrap:wrap; gap:1.5rem; margin:1.5rem 0;">
+						<div style="flex:1; min-width:260px; background:white; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden;">
+							<div style="background:#1a4a8a; color:white; padding:1rem 1.2rem; font-weight:bold;">
+								<i class="fas fa-project-diagram"></i> Technology Acceptance Model (TAM)
+							</div>
+							<div style="padding:1.2rem; font-size:0.95rem; color:#444;">
+								<p>Davis (1989) established that technology adoption is driven by <strong>perceived usefulness</strong> and <strong>perceived ease of use</strong>. Albayati (2024) applied TAM directly to ChatGPT, finding that attitude toward AI is shaped by privacy, security, social influence, and trust. The survey design drew on this framework &mdash; the gap between stated beliefs and actual behaviors maps directly onto the divergence TAM predicts between attitude and use.</p>
+								<p style="font-size:0.85rem; color:#888; margin-bottom:0;">Davis (1989), <em>MIS Quarterly 13</em>(3) &nbsp;|&nbsp; Albayati (2024), Woosong University</p>
+							</div>
+						</div>
+						<div style="flex:1; min-width:260px; background:white; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden;">
+							<div style="background:#2c7a3e; color:white; padding:1rem 1.2rem; font-weight:bold;">
+								<i class="fas fa-brain"></i> Self-Regulated Learning (SRL) &amp; the Socratic Method
+							</div>
+							<div style="padding:1.2rem; font-size:0.95rem; color:#444;">
+								<p>Unstructured AI use outsources thinking; the interventions were designed to redirect AI as a scaffold for self-regulated learning. The Socratic AI Tutor app operationalizes this directly: students prime AI to ask questions rather than give answers, identify their own first step, and reflect on outcomes &mdash; keeping the student as the agent of their learning.</p>
+								<p>The guiding question posed to students before every AI interaction: <em>"Is this helping me achieve the learning objective, or is this beating the assignment?"</em></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- INTERVENTION 1: AI SURVEY -->
+				<section class="post">
+					<div class="intervention-section">
+						<div class="intervention-header survey">
+							<div class="step-num">1</div>
+							<h2>AI Survey &amp; Analysis</h2>
+						</div>
+						<div class="intervention-body">
+							<p>
+								The project began with a comprehensive school-wide survey of 220 middle and high school students to establish a baseline understanding of AI attitudes and behaviors. A key finding was a consistent gap between what students said about AI and what they actually did &mdash; particularly pronounced between middle and high school cohorts.
+							</p>
+
+							<div class="stat-row">
+								<div class="stat-box green">
+									<div class="stat-number">220</div>
+									<div class="stat-label">Student Respondents</div>
+								</div>
+								<div class="stat-box green">
+									<div class="stat-number">50+</div>
+									<div class="stat-label">Survey Variables</div>
+								</div>
+								<div class="stat-box green">
+									<div class="stat-number">2</div>
+									<div class="stat-label">School Levels Compared</div>
+								</div>
+							</div>
+
+							<h3>Key Findings</h3>
+							<ul>
+								<li>Notable divergence between stated AI beliefs and actual usage behaviors</li>
+								<li>Significant differences in AI attitudes and use between middle and high school students</li>
+								<li>High general interest in AI among both cohorts</li>
+								<li>Students primarily using AI as a search engine rather than a research or thinking tool</li>
+							</ul>
+
+							<h3>Interactive Dashboard</h3>
+							<div class="powerbi-embed">
+								<iframe
+									title="AI_Survey_public"
+									width="100%"
+									height="541"
+									src="https://app.powerbi.com/view?r=eyJrIjoiYzcxNGZiNGMtYzA1Ny00YWVlLTgxMGMtZjRjMzgzNTBkYmJmIiwidCI6IjI3OTUxNDU2LWMxYjgtNDcxOC05ZGUwLTFkM2ZkNDc4N2I1NiIsImMiOjEwfQ%3D%3D"
+									frameborder="0"
+									allowFullScreen="true">
+								</iframe>
+								<div class="embed-caption">
+									Interactive Power BI Dashboard &mdash;
+									<a href="https://app.powerbi.com/view?r=eyJrIjoiYzcxNGZiNGMtYzA1Ny00YWVlLTgxMGMtZjRjMzgzNTBkYmJmIiwidCI6IjI3OTUxNDU2LWMxYjgtNDcxOC05ZGUwLTFkM2ZkNDc4N2I1NiIsImMiOjEwfQ%3D%3D" target="_blank">Open in Full Screen</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- INTERVENTION 2: TODDLE AI -->
+				<section class="post">
+					<div class="intervention-section">
+						<div class="intervention-header toddle">
+							<div class="step-num">2</div>
+							<h2>Toddle AI &mdash; Concept Reinforcement</h2>
+						</div>
+						<div class="intervention-body">
+							<p>
+								The second intervention used Toddle AI as a low-stakes, in-class tool for concept reinforcement and review. Students engaged in 15-minute structured AI conversations &mdash; used as either a starter or a closer &mdash; and then wrote reflective AI narratives documenting what worked, what didn't, and how they adapted their questioning strategies. Mixed feedback revealed both the promise and the limits of AI-driven review.
+							</p>
+
+							<div class="stat-row">
+								<div class="stat-box blue">
+									<div class="stat-number">19</div>
+									<div class="stat-label">Student Narratives</div>
+								</div>
+								<div class="stat-box blue">
+									<div class="stat-number">3.7<span style="font-size:1rem;">/5</span></div>
+									<div class="stat-label">Average Rating</div>
+								</div>
+								<div class="stat-box blue">
+									<div class="stat-number">68%</div>
+									<div class="stat-label">Valued Real-Life Examples</div>
+								</div>
+								<div class="stat-box blue">
+									<div class="stat-number">47%</div>
+									<div class="stat-label">Positive Overall Feedback</div>
+								</div>
+							</div>
+
+							<h3>What the Data Showed</h3>
+							<ul>
+								<li>68% of students valued AI-generated real-world examples for understanding concepts</li>
+								<li>37% found it useful specifically for review</li>
+								<li>26% reported negative feedback, often citing concerns about occasional inaccuracies</li>
+								<li>Students who adapted their prompting strategy reported better outcomes and higher engagement</li>
+							</ul>
+
+							<h3>Student Voices</h3>
+							<div class="student-quote">
+								"The conversation flowed step by step, starting from simple, familiar ideas and then moving gradually into more complex economic concepts. This approach helped me feel more curious as it stuck to my daily life experience."
+							</div>
+							<div class="student-quote">
+								"I decided to change the way I write my answers since the first time I was categorized at Developing, which motivated me to write with more clarity and reasoning the second time. Then, I successfully got a Mastery."
+							</div>
+							<div class="student-quote">
+								"I would like my teachers to use this program more but still for reviewing mainly since I heard some of my friends say that they experienced some false information from the Toddle AI."
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- INTERVENTION 3: AI RESEARCH PROTOCOL -->
+				<section class="post">
+					<div class="intervention-section">
+						<div class="intervention-header protocol">
+							<div class="step-num">3</div>
+							<h2>Structured AI Research Protocol</h2>
+						</div>
+						<div class="intervention-body">
+							<p>
+								The third intervention directly addressed the finding that students used AI as a search engine rather than a thinking tool. AP Capstone students completed two parallel research tasks &mdash; one unstructured (free use of AI) and one following a specific step-by-step research protocol. The structured approach produced measurably better outcomes and student reflections revealed a shift in how students experienced the research process itself.
+							</p>
+
+							<div class="stat-row">
+								<div class="stat-box brown">
+									<div class="stat-number">92%</div>
+									<div class="stat-label">Reported Better Results</div>
+								</div>
+								<div class="stat-box brown">
+									<div class="stat-number">77%</div>
+									<div class="stat-label">Preferred Step-by-Step</div>
+								</div>
+								<div class="stat-box brown">
+									<div class="stat-number">4.23<span style="font-size:1rem;">/5</span></div>
+									<div class="stat-label">Overall Impression</div>
+								</div>
+								<div class="stat-box brown">
+									<div class="stat-number">48%</div>
+									<div class="stat-label">Used AI to Write About AI</div>
+								</div>
+							</div>
+
+							<h3>The Protocol</h3>
+							<ol class="method-steps">
+								<li>Review AP and school AI policy; students use AI freely with no constraints</li>
+								<li>Students follow a specific structured research prompting protocol designed to develop a genuine research question</li>
+								<li>Students write AI narratives reflecting on both experiences, comparing process and outcomes</li>
+							</ol>
+
+							<h3>Student Voices</h3>
+							<div class="student-quote">
+								"Using the step-by-step protocol was like finally getting a GPS after wandering around blindfolded. The structure made me think before typing. Instead of the AI dragging me around, I was steering the conversation."
+							</div>
+							<div class="student-quote">
+								"In the first approach, I was primarily struggling with a lack of direction and overwhelm. This time, I struggled with a more active struggle, where the AI provided many good options, and I had to think very carefully which one I wanted to pursue. It felt more like real research work."
+							</div>
+							<div class="student-quote">
+								"I feel like I'm approaching the right direction, but I also feel like it's rigid and not creative. I might miss some more unique/interesting points if I do the process more freely."
+								<cite>Note: This tension between structure and creative freedom was an important finding discussed in the presentation.</cite>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- INTERVENTION 4: SOCRATIC AI TUTOR -->
+				<section class="post">
+					<div class="intervention-section">
+						<div class="intervention-header" style="background:#5a2d8a;">
+							<div class="step-num">4</div>
+							<h2>Socratic AI Tutor &mdash; SRL Problem-Solving App</h2>
+						</div>
+						<div class="intervention-body">
+							<p>
+								The fourth intervention moved from protocol documents to a purpose-built tool. The Socratic AI Tutor is a Streamlit web app that scaffolds students through a structured, self-regulated learning (SRL) workflow for AI-assisted problem solving. Rather than letting students jump straight to asking AI for answers, the app walks them through concept review, problem framing, and strategic prompting &mdash; then guides them to reflect on outcomes.
+							</p>
+							<p>
+								The app generates a ready-to-paste priming message that instructs the AI to act as a Socratic tutor &mdash; scaffolding rather than solving. Students return to the app after working with the AI to log their outcome (Success, Retry, or Mastered) and download a full session transcript for submission.
+							</p>
+
+							<div class="stat-row">
+								<div class="stat-box" style="border-color:#5a2d8a;">
+									<div class="stat-number">6</div>
+									<div class="stat-label">Guided Steps</div>
+								</div>
+								<div class="stat-box" style="border-color:#5a2d8a;">
+									<div class="stat-number">3</div>
+									<div class="stat-label">Download Formats</div>
+								</div>
+								<div class="stat-box" style="border-color:#5a2d8a;">
+									<div class="stat-number"><i class="fas fa-check" style="font-size:1.5rem;"></i></div>
+									<div class="stat-label">Works with Any AI Tool</div>
+								</div>
+							</div>
+
+							<h3>How It Works</h3>
+							<ol class="method-steps">
+								<li>Student enters grade level and course, then reviews the key concepts needed for the problem</li>
+								<li>Student pastes the problem; app generates a Socratic priming message to copy into ChatGPT or Claude</li>
+								<li>Student indicates whether they know the first step (yes/no), receiving a tailored follow-up prompt</li>
+								<li>Student works with the AI, then returns to log their outcome: Success, Retry, or Mastered</li>
+								<li>App generates a downloadable session transcript (full, simple notes, or Toddle-formatted JSON)</li>
+							</ol>
+
+							<a href="https://socratic-ai-tutor-t5d6pot75bphxommag954z.streamlit.app/" target="_blank">
+								<img src="images/SLR APP.png" alt="Socratic AI Tutor App Screenshot" style="width:100%; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.12); border:1px solid #ddd; margin:1.5rem 0;" />
+							</a>
+							<p style="background:#f0f4ff; border-left:4px solid #1a4a8a; border-radius:0 6px 6px 0; padding:0.8rem 1.2rem; font-size:0.95rem; color:#333;">
+								<strong>Note:</strong> The app requires activation before use. If you'd like to try it, please <a href="mailto:js346170@gmail.com">email me</a> and I'll get it running for you.
+							</p>
+							<div style="text-align:center; margin:1rem 0;">
+								<a href="socratic_tutor.html" class="button">Full Project Details</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Takeaways -->
+				<section class="post">
+					<header>
+						<h2>Key Takeaways for AP Teachers</h2>
+					</header>
+					<div class="box">
+						<ul>
+							<li><strong>Survey first:</strong> Baseline data on student beliefs vs. behaviors shapes more targeted interventions</li>
+							<li><strong>Structure improves outcomes:</strong> A step-by-step AI protocol consistently outperformed unstructured use — 92% of students reported better results</li>
+							<li><strong>Student reflection is data:</strong> AI narratives revealed patterns invisible in quantitative data alone, including productive struggle, metacognitive growth, and honest critique</li>
+							<li><strong>Mixed results are honest results:</strong> Toddle AI feedback was deliberately included unfiltered — 26% negative feedback alongside 47% positive tells a more useful story than cherry-picked wins</li>
+						<li><strong>Build the scaffold, not just the rules:</strong> The Socratic AI Tutor moves from telling students how to use AI to giving them a repeatable workflow they can internalize and eventually use independently</li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; James Stringer Portfolio</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
